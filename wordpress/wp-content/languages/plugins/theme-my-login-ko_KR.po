@@ -1,0 +1,675 @@
+# Translation of Plugins - Theme My Login - Development (trunk) in Korean
+# This file is distributed under the same license as the Plugins - Theme My Login - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-05-26 11:36:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ko_KR\n"
+"Project-Id-Version: Plugins - Theme My Login - Development (trunk)\n"
+
+#: includes/actions.php:758
+msgid "Missing confirm key."
+msgstr "확인 키가 없네요."
+
+#: includes/actions.php:754
+msgid "Missing request ID."
+msgstr "요청 ID가 없네요."
+
+#: includes/actions.php:443
+msgid "https://wordpress.org/support/article/cookies#enable-cookies-your-browser"
+msgstr "https://wordpress.org/support/article/cookies#enable-cookies-your-browser"
+
+#: includes/actions.php:435
+msgid "https://wordpress.org/support/article/cookies/"
+msgstr "https://wordpress.org/support/article/cookies/"
+
+#: admin/functions.php:354
+msgid "Settings"
+msgstr "설정"
+
+#: admin/functions.php:179
+msgid "A new <strong>Theme My Login</strong> extension is available!"
+msgstr "새로운 <strong>나의 로그인 테미</strong> 확장이 사용가능해요!"
+
+#: admin/settings.php:749
+msgid "On this page, you can configure the settings for the Theme My Login %s extension."
+msgstr "이 페이지에서, 당신은 나의 로그인 테마 %s 확장에 대한 설정을 구성할 수 있어요."
+
+#: admin/settings.php:738
+msgid "View your Theme My Login account"
+msgstr "당신의 나의 로그인 테마 계정을 보기"
+
+#: admin/settings.php:734
+msgid "Go to the Extensions Store"
+msgstr "확장 저장소로 가요"
+
+#: admin/settings.php:692 admin/settings.php:714 admin/settings.php:765
+msgid "Get Support"
+msgstr "지원 받기"
+
+#: admin/settings.php:687 admin/settings.php:710 admin/settings.php:730
+#: admin/settings.php:758
+msgid "View Documentation"
+msgstr "문서 보기"
+
+#: includes/class-theme-my-login-widget.php:57
+msgctxt "Howdy"
+msgid "Welcome"
+msgstr "환영해요"
+
+#: admin/settings.php:788
+msgid "For more information:"
+msgstr "추가 정보는:"
+
+#: admin/settings.php:725
+msgid "Once you purchase an extension, you download it from your email receipt or your account page on our website. Then, you install it just like a normal WordPress plugin."
+msgstr "당신이 확장을 한 번 구매하면, 당신은 당신의 이메일 영수증 또는 우리 사이트의 당신의 계정 페이지에서 내려받을 수 있어요. 그런 다음, 당신은 일반 워드프레스 플러그인과 같이 설치하세요."
+
+#: admin/settings.php:724
+msgid "This page shows you all of the extensions available to purchase for Theme My Login."
+msgstr "이 페이지는 나의 로그인 테마를 구매가 가능한 확장의 모든 것을 보여주어요."
+
+#: admin/settings.php:705
+msgid "If you have already activated your license, this button will say \"Deactivate\". Click this button to deactivate your license."
+msgstr "당신이 이미 당신의 라이선스를 활성화했다면, 이 단추는 “비활성화”하라고 말할거에요. 당신의 라이선스를 비활성화하기 위한 이 단추를 눌러요."
+
+#: admin/settings.php:704
+msgid "If you have not yet activated your license, this button will say \"Activate\". Click this button to activate your license."
+msgstr "당신이 아직 당신의 라이선스를 활성화하지 않았다면, 이 단추는 “활성화”라고 말할거에요. 당신의 라이선스를 활성화하는 이 단추를 누르세요."
+
+#: admin/settings.php:703
+msgid "After you enter your license keys and click the Save Changes button at the bottom of the screen, you will see a new button next to each field with a license in it."
+msgstr "당신이 라이선스 키를 입력하고 화면 하단에 있는 변화 저장하기 단추를 누른 뒤에, 당신은 그 안에 있는 라이선스와 함께 각 입력란 옆에 있는 새로운 단추를 볼 수 있을거에요."
+
+#: admin/settings.php:702
+msgid "When you purchase extensions for Theme My Login, you will enter your license keys on this page."
+msgstr "당신이 나의 로그인 테마용 확장을 구매할 때, 당신은 이 페이지에 당신의 라이선스를 입력하세요."
+
+#: admin/settings.php:682 admin/settings.php:752
+msgid "You must click the Save Changes button at the bottom of the screen for new settings to take effect."
+msgstr "당신은 새로운 설정이 효과가 있게 하기 위해 화면 하단에 있는 변화 저장하기 단추를 눌러야만 해요."
+
+#: admin/settings.php:681
+msgid "Additionally, you can change the slugs that are used to generate the URLs that represent specific actions."
+msgstr "더하여, 당신은 특정 동작을 보여주는 URL을 생성하는데 사용되는 슬러그를 바꿀 수 있어요."
+
+#: admin/settings.php:680
+msgid "Below, you can configure how you would like users to register and log in to your site."
+msgstr "아래에, 당신은 이용자가 당신의 사이트에 등록하고 로그인하는 방법을 설정할 수 있어요."
+
+#: admin/settings.php:679
+msgid "Welcome to Theme My Login!"
+msgstr "나의 로그인 테마에 오신 것을 환영해요!"
+
+#: admin/settings.php:677 admin/settings.php:700 admin/settings.php:722
+#: admin/settings.php:746
+msgid "Overview"
+msgstr "개요"
+
+#: admin/settings.php:253
+msgid "The slugs defined here will be used to generate the URL to the corresponding action. You can see this URL below the slug field. If you would like to use pages for these actions, simply make sure the slug for the action below matches the slug of the page you would like to use for that action."
+msgstr "여기 이 슬러그는 동작에 어울리는 URL을 생성하는데 사용될 거에요. 당신은 슬러그 입력란 아래에서 이 URL을 볼 수 있어요. 당신이 이 동작들을 위한 페이지를 사용하기 원한다면, 단지 아래에 있는 동작을 위한 슬러그가 그 동작을 사용하기 원하는 페이지의 슬러그와 일치하는지 확인하세요."
+
+#. Description of the plugin
+#: theme-my-login.php
+msgid "Creates an alternate login, registration and password recovery experience within your theme."
+msgstr "테마 내에서 대체 로그인, 등록과 암호 복구 경험을 만들어요."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: theme-my-login.php
+msgid "https://thememylogin.com"
+msgstr "https://thememylogin.com"
+
+#: includes/ms-functions.php:735
+msgid "The site you were looking for, %s, does not exist."
+msgstr "당신이 찾고 있는 이 사이트, %s,가 존재하지 않아요."
+
+#: includes/ms-functions.php:730
+msgid "The site you were looking for, %s, does not exist, but you can create it now!"
+msgstr "당신이 찾고 있는 이 사이트, %s,는 존재하지 않아요, 하지만 당신은 지금 만들 수 있어요!"
+
+#: includes/ms-functions.php:696
+msgid "%1$s is your new site. <a href=\"%2$s\">Log in</a> as &#8220;%3$s&#8221; using your existing password."
+msgstr "%1$s (은)는 당신의 새로운 사이트에요. 당신의 존재하는 암호를 사용하여 “%3$s”로 <a href=\"%2$s\">로그인</a> 하세요."
+
+#: includes/ms-functions.php:634 includes/ms-functions.php:654
+msgid "Check your inbox at %s and click the link given."
+msgstr "받은편지함에서 %s 을 확인하고 주어진 링크를 누르세요."
+
+#: includes/ms-functions.php:605
+msgid "To change or disable registration go to your <a href=\"%s\">Options page</a>."
+msgstr "바꾸거나 등록을 비활성화 하려면 당신의 <a href=\"%s\">설정 페이지</a> 로 이동하세요."
+
+#: includes/ms-functions.php:601
+msgid "The network currently allows both site and user registrations."
+msgstr "네트워크는 현재 사이트와 이용자 등록 모두를 허용해요."
+
+#: includes/ms-functions.php:597
+msgid "The network currently allows user registrations."
+msgstr "네트워크는 현재 이용자 등록을 허용해요."
+
+#: includes/ms-functions.php:593
+msgid "The network currently allows site registrations."
+msgstr "네트워크른 현재 사이트 등록을 허용해요."
+
+#: includes/ms-functions.php:589
+msgid "The network currently disallows registrations."
+msgstr "네트워크는 현재 등록을 허용하지 않고 있어요."
+
+#: includes/ms-functions.php:586
+msgid "Greetings Network Administrator!"
+msgstr "네트워크 관리자의 인사말!"
+
+#: includes/functions.php:814
+msgid "Username or Email Address"
+msgstr "이용자명 또는 이메일 주소"
+
+#: includes/functions.php:732
+msgid "If you have already set your own password, you may disregard this email and use the password you have already set."
+msgstr "당신이 이미 당신의 암호를 설정했다면, 당신은 이 이메일을 무시하고 당신이 이미 설정한 암호를 사용하세요."
+
+#: includes/functions.php:603 includes/functions.php:630
+#: includes/functions.php:645
+msgid "TML Action"
+msgstr "TML 동작"
+
+#: includes/functions.php:575
+msgid "Theme My Login Action"
+msgstr "나의 로그인 테마 동작"
+
+#: includes/extensions.php:214
+msgid "Your license key has reached its activation limit."
+msgstr "당신의 라이선스키는 활성화 한계에 도달했어요."
+
+#: includes/extensions.php:210
+msgid "Invalid license."
+msgstr "유효하지 않은 라이선스에요."
+
+#: includes/extensions.php:202
+msgid "Your license key has been disabled."
+msgstr "당신의 라이선스키는 비활성화되었어요."
+
+#: includes/extensions.php:196
+msgid "Your license key expired on %s."
+msgstr "당신의 라이선스키는 %s에 만료되요."
+
+#: includes/extensions.php:189 includes/extensions.php:222
+#: includes/extensions.php:252 includes/extensions.php:287
+msgid "An error occurred, please try again."
+msgstr "오류가 발생했어요, 다시 시도해주시기 바래요."
+
+#. translators: %s: site name
+#: includes/compat.php:95
+msgid "Site Name: %s"
+msgstr "사이트명: %s"
+
+#: includes/class-theme-my-login-widget.php:177
+msgid "Show action links?"
+msgstr "동작 링크 보일까요?"
+
+#: includes/class-theme-my-login-widget.php:166
+msgid "Action:"
+msgstr "동작:"
+
+#: includes/actions.php:80
+msgid "Your Data Request"
+msgstr "당신의 자료 요청"
+
+#: includes/actions.php:63
+msgid "Lost your password?"
+msgstr "당신의 암호를 잃으셨나요?"
+
+#: admin/settings.php:648
+msgid "Settings saved."
+msgstr "설정 저장됨."
+
+#: admin/settings.php:529
+msgid "Deactivate"
+msgstr "비활성화"
+
+#: admin/extensions.php:218 admin/settings.php:517
+msgid "Inactive"
+msgstr "비활성"
+
+#: admin/settings.php:514
+msgid "Invalid"
+msgstr "무효"
+
+#: admin/extensions.php:193 admin/settings.php:511
+msgid "Active"
+msgstr "유효"
+
+#: admin/settings.php:202
+msgid "Automatically log in users after registration"
+msgstr "등록 후 자동으로 이용자 로그인"
+
+#: admin/settings.php:197
+msgid "Auto-Login"
+msgstr "자동 로그인"
+
+#: admin/settings.php:190
+msgid "Allow users to set their own password"
+msgstr "이용자가 그들 자신의 암호를 설정할 수 있게 허용하기"
+
+#: admin/settings.php:185
+msgid "Passwords"
+msgstr "암호"
+
+#: admin/settings.php:170 admin/settings.php:175
+msgid "Registration Type"
+msgstr "등록 유형"
+
+#: admin/settings.php:113
+msgid "Slugs"
+msgstr "슬러그"
+
+#: admin/settings.php:108
+msgid "Registration"
+msgstr "등록"
+
+#: admin/functions.php:314
+msgid "Add to Menu"
+msgstr "메뉴에 추가하기"
+
+#: admin/functions.php:281 includes/functions.php:574
+msgid "Theme My Login Actions"
+msgstr "나의 로그인 테마 동작"
+
+#: admin/functions.php:163
+msgid "As a token of our gratitude, we would like to offer your an incentive for upgrading Theme My Login to version 7.0. For a limited time, we are offering a <strong>20% discount</strong> when you use the code <strong>SAVINGFACE</strong> at checkout. Act now - this offer won't last!"
+msgstr "감사의 표시로, 나의 로그인 테마를 7.0판으로 올리기 위해 인센티브를 제공하고자 해요. 제한 시간동안, 결제시 <strong>SAVINGFACE</strong> 코드를 사용할 때 우리는 <strong>20% 할인</strong>을 제공해요. 지금 하세요 - 이 제인이 마지막이에요!"
+
+#: admin/functions.php:110 admin/functions.php:358
+msgid "Extensions"
+msgstr "확장"
+
+#: admin/functions.php:109
+msgid "Theme My Login Extensions"
+msgstr "나의 로그인 테마 확장"
+
+#: admin/functions.php:100
+msgid "Licenses"
+msgstr "라이센스"
+
+#: admin/functions.php:99
+msgid "Theme My Login Licenses"
+msgstr "나의 로그인 테마 라이선스"
+
+#: admin/extensions.php:104
+msgid "View All Extensions"
+msgstr "모든 확장 보기"
+
+#: admin/extensions.php:94 admin/functions.php:186
+msgid "Get This Extension"
+msgstr "이 확장을 얻으세요"
+
+#: admin/extensions.php:72
+msgid "Error: %s"
+msgstr "오류: %s"
+
+#: admin/extensions.php:71
+msgid "Whoops! Looks like there was an error fetching extensions from the server. Please try again."
+msgstr "어익후! 서버에서 확장을 가져오는데 오류가 있는 것처럼 보여요. 다시 시도해 보시기 바래요."
+
+#: includes/forms.php:274
+msgid "Confirm new password"
+msgstr "새 비밀번호 확인"
+
+#: includes/forms.php:158 includes/forms.php:285 includes/ms-functions.php:376
+msgid "Strength indicator"
+msgstr "강도 표시기"
+
+#: includes/forms.php:263
+msgid "New password"
+msgstr "새 비밀번호"
+
+#: includes/forms.php:177
+msgid "Registration confirmation will be emailed to you."
+msgstr "등록 확인이 당신에게 메일로 발송될 거에요."
+
+#: includes/ms-functions.php:1089
+msgid "New Password"
+msgstr "새 비밀번호"
+
+#: includes/ms-functions.php:150
+msgid "Next"
+msgstr "다음"
+
+#: includes/ms-functions.php:140
+msgid "Just a username, please."
+msgstr "그냥 이용자명만, 부탁드려요."
+
+#: includes/ms-functions.php:139
+msgid "Gimme a site!"
+msgstr "사이트를 주세요!"
+
+#: includes/ms-functions.php:105
+msgid "We send your registration email to this address. (Double-check your email address before continuing.)"
+msgstr "이 주소로 가입 이메일을 보내요. (계속하기 전에 다시 한번 이메일 주소를 확인하세요.)"
+
+#: includes/ms-functions.php:104
+msgid "Email&nbsp;Address:"
+msgstr "이메일&nbsp;주소:"
+
+#: includes/ms-functions.php:82
+msgid "(Must be at least 4 characters, letters and numbers only.)"
+msgstr "(최소 4글자 이상, 글자와 숫자만 사용 가능)"
+
+#: includes/ms-functions.php:788
+msgid "Get your own %s account in seconds"
+msgstr "몇 초만에 자신만의 %s 계정을 만드세요"
+
+#: includes/ms-functions.php:195
+msgid "Signup"
+msgstr "가입"
+
+#: includes/ms-functions.php:232
+msgid "Create Site"
+msgstr "사이트 생성"
+
+#: includes/ms-functions.php:311
+msgid "No"
+msgstr "아니오"
+
+#: includes/ms-functions.php:310
+msgid "Yes"
+msgstr "네"
+
+#: includes/ms-functions.php:315
+msgid "Allow search engines to index this site."
+msgstr "검색엔진이 이 사이트를 검색목록에 포함하도록 허용해요."
+
+#: includes/ms-functions.php:307
+msgid "Privacy:"
+msgstr "프라이버시:"
+
+#: includes/ms-functions.php:292
+msgid "Site Title:"
+msgstr "사이트 제목:"
+
+#: includes/ms-functions.php:251 includes/ms-functions.php:272
+msgid "Must be at least 4 characters, letters and numbers only. It cannot be changed, so choose carefully!"
+msgstr "최소한 4글자 이상이어야하고 글자와 숫자만 가능해요. 변경될 수 없으니 주의해서 선택하세요!"
+
+#: includes/ms-functions.php:250 includes/ms-functions.php:271
+msgid "Your address will be %s."
+msgstr "주소는 %s가 될 거에요."
+
+#: includes/ms-functions.php:271
+msgid "domain"
+msgstr "domain"
+
+#: includes/ms-functions.php:250
+msgid "sitename"
+msgstr "sitename"
+
+#: includes/ms-functions.php:277
+msgid "Site Domain:"
+msgstr "사이트 도메인:"
+
+#: includes/ms-functions.php:256
+msgid "Site Name: "
+msgstr "사이트명:  "
+
+#: includes/ms-functions.php:883
+msgid "If you&#8217;re not going to use a great site domain, leave it for a new user. Now have at it!"
+msgstr "만약 좋은 사이트 도메인을 사용하지 않을거라면, 새로운 회원님을 위해 놔두세요. 이제 시작해봅시다!"
+
+#: includes/ms-functions.php:875
+msgid "Sites you are already a member of:"
+msgstr "이미 회원인 사이트:"
+
+#: includes/ms-functions.php:871
+msgid "Welcome back, %s. By filling out the form below, you can <strong>add another site to your account</strong>. There is no limit to the number of sites you can have, so create to your heart&#8217;s content, but write responsibly!"
+msgstr "%s님 다시 방문해 주셔서 감사합니다. 아래의 양식을 작성해 주시면 <strong>귀하의 계정에 다른 사이트를 추가할 수</strong> 있습니다. 개설할 수 있는 사이트는 제한이 없으며 원하는대로 사이트를 만들 수 있습니다. 하지만 책임감을 갖고 글을 올려주세요."
+
+#: includes/ms-functions.php:867
+msgid "Get <em>another</em> %s site in seconds"
+msgstr "<em>다른</em> %s 사이트를 가져오기"
+
+#: includes/forms.php:233
+msgid "Get New Password"
+msgstr "새 비밀번호 얻기"
+
+#: includes/forms.php:70
+msgid "Remember Me"
+msgstr "로그인 유지"
+
+#: includes/forms.php:109 includes/functions.php:803 includes/functions.php:810
+msgid "Username"
+msgstr "아이디"
+
+#: admin/settings.php:157 admin/settings.php:177
+msgid "Default"
+msgstr "기본"
+
+#: includes/actions.php:32
+msgid "Log in"
+msgstr "로그인"
+
+#: includes/actions.php:513
+msgid "Registration complete. You may now log in."
+msgstr "회원가입이 완료되었어요. 로그인해주세요."
+
+#: includes/forms.php:148 includes/ms-functions.php:366
+msgid "Confirm Password"
+msgstr "비밀번호 확인"
+
+#: includes/forms.php:57 includes/forms.php:138 includes/ms-functions.php:356
+msgid "Password"
+msgstr "비밀번호"
+
+#: includes/forms.php:129 includes/functions.php:812
+msgid "Email"
+msgstr "이메일"
+
+#. translators: Password reset email subject. %s: Site name
+#: includes/compat.php:112
+msgid "[%s] Password Reset"
+msgstr "[%s] 비밀번호 초기화"
+
+#: includes/compat.php:99
+msgid "To reset your password, visit the following address:"
+msgstr "비밀번호를 변경하려면 다음 주소를 방문하세요:"
+
+#: includes/compat.php:98
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "만약 실수라면 이 이메일을 무시하세요. 아무일도 생기지 않아요."
+
+#. translators: %s: user login
+#: includes/compat.php:97
+msgid "Username: %s"
+msgstr "아이디: %s"
+
+#: includes/compat.php:93
+msgid "Someone has requested a password reset for the following account:"
+msgstr "누군가가 다음 계정에 대한 암호 재설정을 요청했어요:"
+
+#: includes/actions.php:522
+msgid "<strong>You have successfully updated WordPress!</strong> Please log back in to see what&#8217;s new."
+msgstr "<strong>성공적으로 워드프레스를 업데이트하였습니다!!</strong> 다시 로그인하여 즐거운 경험을 해보세요."
+
+#: includes/actions.php:519
+msgid "Your password has been reset."
+msgstr "비밀번호가 초기화되었어요."
+
+#: includes/actions.php:503
+msgid "You are now logged out."
+msgstr "로그아웃 하셨어요."
+
+#: includes/actions.php:69
+msgid "Reset Password"
+msgstr "비밀번호 초기화"
+
+#: includes/actions.php:38 includes/class-theme-my-login-widget.php:100
+#: includes/shortcodes.php:89
+msgid "Log Out"
+msgstr "로그아웃"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: theme-my-login.php admin/functions.php:67
+#: includes/class-theme-my-login-widget.php:23
+msgid "Theme My Login"
+msgstr "Theme My Login"
+
+#: includes/class-theme-my-login-widget.php:25
+msgid "A login form for your site."
+msgstr "당신의 사이트에 대한 로그인 양식."
+
+#: includes/actions.php:19 includes/class-theme-my-login-widget.php:92
+msgid "Dashboard"
+msgstr "대시보드"
+
+#: admin/settings.php:103 includes/actions.php:28 includes/forms.php:78
+msgid "Log In"
+msgstr "로그인"
+
+#: includes/actions.php:58
+msgid "Lost Password"
+msgstr "비밀번호 분실"
+
+#: includes/actions.php:48 includes/forms.php:184
+msgid "Register"
+msgstr "회원가입"
+
+#: includes/ms-functions.php:1116
+msgid "Your account is now activated. <a href=\"%1$s\">Log in</a> or go back to the <a href=\"%2$s\">homepage</a>."
+msgstr "당신의 계정이 이제 활성화되었네요. <a href=\"%1$s\">로그인</a> 하시거나 또는 <a href=\"%2$s\">홈페이지</a> 로 돌아가세요."
+
+#: includes/ms-functions.php:1112
+msgid "Your account is now activated. <a href=\"%1$s\">View your site</a> or <a href=\"%2$s\">Log in</a>"
+msgstr "당신의 계정이 이제 활성화되었네요. <a href=\"%1$s\">당신의 사이트</a> 를 보거나 또는 <a href=\"%2$s\">로그인</a> 하세요"
+
+#: includes/ms-functions.php:1103
+msgid "Password:"
+msgstr "암호:"
+
+#: includes/ms-functions.php:81 includes/ms-functions.php:1102
+msgid "Username:"
+msgstr "이용자명:"
+
+#: includes/ms-functions.php:1092
+msgid "An error occurred during the activation"
+msgstr "활성화 도중 오류가 발생했어요"
+
+#: includes/ms-functions.php:1073
+msgid "Your site at %1$s is active. You may now log in to your site using your chosen username of &#8220;%2$s&#8221;. Please check your email inbox at %3$s for your password and login instructions. If you do not receive an email, please check your junk or spam folder. If you still do not receive an email within an hour, you can <a href=\"%4$s\">reset your password</a>."
+msgstr "%1$s에 있는 사이트가 활성화 됐습니다. 이제 &#8220;%2$s&#8221;의 선택하신 이용자명으로  사이트에 로그인하실 수 있습니다. 비밀번호와 로그인 안내를 %3$s의 받은 편지함에서 확인하시기 바랍니다. 이메일을 받지 않았다면, 스팸이나 정크 폴더를 확인하시기 바랍니다. 한 시간 이후에도 여전히 이메일을 받지 않았다면, <a href=\"%4$s\">비밀번호 재설정</a>을 하실 수 있습니다."
+
+#: includes/ms-functions.php:1065
+msgid "Your account has been activated. You may now <a href=\"%1$s\">log in</a> to the site using your chosen username of &#8220;%2$s&#8221;. Please check your email inbox at %3$s for your password and login instructions. If you do not receive an email, please check your junk or spam folder. If you still do not receive an email within an hour, you can <a href=\"%4$s\">reset your password</a>."
+msgstr "계정이 활성화되었습니다. 이제 선택한 ID &#8220;%2$s&#8221;로 사이트에 <a href=\"%1$s\">로그인</a>할 수 있습니다. %3$s 에서 이메일을 확인하여 비밀번호와 로그인 안내를 받으세요. 이메일을 수신하지 못한 경우 스팸메일이나 정크메일함을 확인하세요. 한시간이 지나도 이메일을 받지 못하면 <a href=\"%4$s\">비밀번호 초기화</a>를 할 수 있습니다."
+
+#: includes/ms-functions.php:1061 includes/ms-functions.php:1099
+msgid "Your account is now active!"
+msgstr "계정이 활성화되었어요!"
+
+#: admin/settings.php:541 includes/ms-functions.php:389
+msgid "Activate"
+msgstr "활성화"
+
+#: includes/ms-functions.php:347
+msgid "Activation Key:"
+msgstr "인증 키:"
+
+#: includes/ms-functions.php:1053
+msgid "Activation Key Required"
+msgstr "인증 키가 필요해요"
+
+#: includes/ms-functions.php:722
+msgid "You are logged in already. No need to register again!"
+msgstr "이미 로그인 되어있어요. 회원가입을 하실 필요가 없어요!"
+
+#: includes/ms-functions.php:720
+msgid "Sorry, new registrations are not allowed at this time."
+msgstr "죄송해요. 회원가입이 현재 허용되지 않아요."
+
+#: includes/ms-functions.php:694
+msgid "The site %s is yours."
+msgstr "사이트 %s 은(는) 귀하의 거에요."
+
+#: includes/ms-functions.php:667
+msgid "Site registration has been disabled."
+msgstr "사이트 등록이 중지되어 있어요."
+
+#: includes/ms-functions.php:662
+msgid "Have you entered your email correctly? You have entered %s, if it&#8217;s incorrect, you will not receive your email."
+msgstr "당신의 이메일을 바르게 입력하셨나요? 당신은 %s 를 입력하셨어요, 만약 틀리다면, 당신은 당신의 이메일을 받지 않을 거에요."
+
+#: includes/ms-functions.php:661
+msgid "Check the junk or spam folder of your email client. Sometime emails wind up there by mistake."
+msgstr "스팸 편지함을 확인해보세요. 가끔씩 이메일이 그 곳으로 전송되는 경우가 있어요."
+
+#: includes/ms-functions.php:660
+msgid "Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
+msgstr "조금 더 기다려주세요. 가끔씩 이메일이 늦게 전송될 때가 있어요."
+
+#: includes/ms-functions.php:658
+msgid "If you haven&#8217;t received your email yet, there are a number of things you can do:"
+msgstr "아직 이메일이 도착하지 않았다면, 다음 사항을 따라해보시기 바래요:"
+
+#: includes/ms-functions.php:656
+msgid "Still waiting for your email?"
+msgstr "아직 이메일이 도착하지 않았나요?"
+
+#: includes/ms-functions.php:655
+msgid "If you do not activate your site within two days, you will have to sign up again."
+msgstr "이틀 이내에 사이트를 활성화하지 않으면, 다시 가입해야 해요."
+
+#: includes/ms-functions.php:653
+msgid "But, before you can start using your site, <strong>you must activate it</strong>."
+msgstr "하지만, 사이트를 사용하기 전에 <strong>활성화해야 해요</strong>."
+
+#: includes/ms-functions.php:652
+msgid "Congratulations! Your new site, %s, is almost ready."
+msgstr "축하해요! 새로운 사이트인 %s 이(가) 거의 준비되었어요."
+
+#: includes/ms-functions.php:638
+msgid "User registration has been disabled."
+msgstr "회원 가입이 비활성화 되어 있어요."
+
+#: includes/ms-functions.php:635
+msgid "If you do not activate your username within two days, you will have to sign up again."
+msgstr "이틀 이내에 아이디를 활성화하지 않으면, 다시 가입해야 해요."
+
+#: includes/ms-functions.php:633
+msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
+msgstr "하지만, 새로운 아이디를 사용하기 전에 <strong>아이디를 활성화해야 해요</strong>."
+
+#: includes/ms-functions.php:632
+msgid "%s is your new username"
+msgstr "%s가 귀하의 새 아이디에요"
+
+#: includes/ms-functions.php:617
+msgid "You must first <a href=\"%s\">log in</a>, and then you can create a new site."
+msgstr "먼저 <a href=\"%s\">로그인</a>한 뒤, 새로운 사이트를 생성할 수 있어요."
+
+#: includes/ms-functions.php:614
+msgid "Registration has been disabled."
+msgstr "회원 가입이 비활성화 되었어요."
+
+#: admin/settings.php:159 admin/settings.php:178
+msgid "Email only"
+msgstr "이메일만 사용"
+
+#: admin/settings.php:158
+msgid "Username only"
+msgstr "아이디만 사용"
+
+#: admin/settings.php:150 admin/settings.php:155
+msgid "Login Type"
+msgstr "로그인 유형"
+
+#: admin/functions.php:78 admin/settings.php:98
+msgid "General"
+msgstr "일반 설정"
+
+#: admin/functions.php:66 admin/functions.php:77
+msgid "Theme My Login Settings"
+msgstr "Theme My Login 설정"

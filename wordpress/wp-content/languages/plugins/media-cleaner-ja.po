@@ -1,0 +1,47 @@
+# Translation of Plugins - Media Cleaner: Clean your WordPress! - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Media Cleaner: Clean your WordPress! - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-06-25 07:26:14+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Media Cleaner: Clean your WordPress! - Stable (latest release)\n"
+
+#: classes/rest.php:201
+msgid "Invalid Regular-Expression"
+msgstr "不正な正規表現"
+
+#: classes/ui.php:125
+msgid "Restore with Media Cleaner"
+msgstr "Media Cleaner で復元"
+
+#: classes/ui.php:122
+msgid "Trash with Media Cleaner"
+msgstr "Media Cleaner でゴミ箱へ"
+
+#: classes/ui.php:119
+msgid "Delete with Media Cleaner"
+msgstr "Media Cleaner で削除"
+
+#: common/admin.php:447 common/admin.php:448
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#. Plugin URI of the plugin
+#: media-cleaner.php
+msgid "https://meowapps.com"
+msgstr "https://meowapps.com"
+
+#. Author of the plugin
+#: media-cleaner.php
+msgid "Jordy Meow"
+msgstr "Jordy Meow"
+
+#. Plugin Name of the plugin
+#: media-cleaner.php
+msgid "Media Cleaner"
+msgstr "Media Cleaner"

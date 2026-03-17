@@ -1,0 +1,221 @@
+# Translation of Plugins - Media Cleaner: Clean your WordPress! - Stable (latest release) in Korean
+# This file is distributed under the same license as the Plugins - Media Cleaner: Clean your WordPress! - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-12-04 06:57:55+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ko_KR\n"
+"Project-Id-Version: Plugins - Media Cleaner: Clean your WordPress! - Stable (latest release)\n"
+
+#: classes/rest.php:365
+msgid "Retrieved %d hash duplicates."
+msgstr "%d 해시 중복을 검색했습니다."
+
+#: classes/rest.php:1212
+msgid "This feature for Pro users."
+msgstr "Pro 사용자를 위한 기능입니다."
+
+#: classes/rest.php:314
+msgid "The postId parameter must be null or an integer."
+msgstr "PostId 매개변수는 null이거나 정수여야 합니다."
+
+#: classes/rest.php:222
+msgid "References were reset."
+msgstr "참조가 초기화되었습니다."
+
+#: classes/rest.php:216
+msgid "Issues and References were reset."
+msgstr "문제 및 참조가 초기화되었습니다."
+
+#: classes/rest.php:331
+msgid "No source was mentioned while calling the extract_references action."
+msgstr "Extract_references 동작을 호출하는 동안 소스가 언급되지 않았습니다."
+
+#: classes/rest.php:262
+msgid "No source was mentioned while calling all_ids."
+msgstr "All_ids를 호출하는 동안 소스가 언급되지 않았습니다."
+
+#: classes/rest.php:238
+msgid "No source was mentioned while calling count."
+msgstr "카운트를 호출하는 동안 소스가 언급되지 않았습니다."
+
+#: classes/rest.php:209
+msgid "Issues were reset."
+msgstr "문제가 초기화되었습니다."
+
+#: common/ratings.php:106
+msgid "✌️ Done!"
+msgstr "✌️ 완료!"
+
+#: common/ratings.php:95
+msgid "<h2 style=\"margin: 0\" class=\"title\">You have been using <b>%1$s</b> for some time now. Thank you! 💕</h2><p>If you have a minute, can you write a <b><a target=\"_blank\" href=\""
+msgstr "<h2 style=\"margin: 0\" class=\"title\"><b>%1$s</b>를 사용 중이십니다. 감사합니다! 💕</h2><p>시간이 있으시면 <b><a target=\"_blank\" href=\""
+
+#: common/news.php:101
+msgid "❌ Delete"
+msgstr "❌ 삭제"
+
+#: common/news.php:92
+msgid "👉 AI Engine at WordPress.org"
+msgstr "👉 WordPress.org에 있는 AI Engine"
+
+#: common/news.php:87
+msgid "<p style=\"font-size: 14px;\">Since the end of 2022, I worked a lot to craft <b>the perfect AI plugin for WordPress</b>. Since March 2023, it's perfectly stable and packed with features. You'll get chatbots, AI forms, easy model training, content and images generation, a template system that will allow you to create your personal assistants for various tasks and much more! Here it is: <a href=\"%s\" target=\"_blank\">AI Engine</a>. Believe me, you will enjoy this. Have fun, and let me know how it goes! 🥳</p>"
+msgstr "<p style=\"font-size: 14px;\">2022년 말부터 <b>워드프레스를 위한 완벽한 인공지능 플러그인</b>을 만들기 위해 많은 노력을 기울였습니다. 2023년 3월부터 완벽하게 안정적이고 다양한 기능을 제공합니다. 챗봇, AI 양식, 간편한 모델 학습, 콘텐츠 및 이미지 생성, 다양한 작업을 위한 개인 비서를 만들 수 있는 템플릿 시스템 등이 제공됩니다! 여기 있습니다: <a href=\"%s\" target=\"_blank\">AI 엔진</a>. 저를 믿으세요, 여러분은 이것을 즐길 것입니다. 재미있게 사용하시고 어떻게 되는지 알려주세요! 🥳</p>"
+
+#: common/news.php:84
+msgid "<h2 style=\"margin: 0 0 10px 0\" class=\"title\">AI Engine by Meow Apps: The Power of AI into WordPress 💫</h2>"
+msgstr "<h2 style=\"margin: 0 0 10px 0\" class=\"title\">Meow Apps의 AI Engine: 워드프레스에 탑재된 AI의 힘 💫</h2>"
+
+#. Description of the plugin
+#: media-cleaner.php
+msgid "Clean your WordPress! Eliminate unused and broken media files. For a faster, and better website."
+msgstr "워드프레스를 정리하세요! 사용하지 않거나 손상된 미디어 파일을 제거하세요. 더 빠르고 더 나은 웹사이트를 위해."
+
+#: classes/core.php:2293
+msgid "Not found in content"
+msgstr "콘텐츠에서 찾을 수 없음"
+
+#: common/news.php:96 common/ratings.php:114
+msgid "⏰ Remind me later"
+msgstr "⏰ 나중에 알려주기"
+
+#. Author URI of the plugin
+#: media-cleaner.php
+msgid "https://jordymeow.com"
+msgstr "https://jordymeow.com"
+
+#: common/admin.php:231 common/admin.php:243
+msgid "<a target=\"_blank\" href=\"https://meowapps.com\">Get the <u>Pro Version</u></a>"
+msgstr "<a target=\"_blank\" href=\"https://meowapps.com\"><u>Pro 버전 받기</u></a>"
+
+#: common/admin.php:243
+msgid "License Issue"
+msgstr "라이선스 문제"
+
+#: common/admin.php:239
+msgid "<a href=\"admin.php?page=%s_settings\">Settings</a>"
+msgstr "<a href=\"admin.php?page=%s_settings\">설정</a>"
+
+#: classes/rest.php:422
+msgid "No files for this path (%s)."
+msgstr "이 경로에 파일이 없습니다 (%s)."
+
+#: classes/init.php:5
+msgid "Thanks for installing the Pro version of Media Cleaner :) However, the free version is still enabled. Please disable or uninstall it."
+msgstr "Media Cleaner의 Pro 버전을 설치해주셔서 감사드립니다 :) 하지만, 무료 버전도 여전히 활성화 중입니다. 활성 해제하고 설치 해제해주세요."
+
+#: classes/ui.php:47
+msgid "Cleaner"
+msgstr "정리기"
+
+#: classes/engine.php:295
+msgid "Extracted references from %d medias in %s."
+msgstr "%d개 미디어를 %s에서 확인했습니다."
+
+#: classes/core.php:2305
+msgid "No attached file"
+msgstr "첨부되지 않은 파일"
+
+#: classes/core.php:2296
+msgid "Not in Library"
+msgstr "라이브러리에 없음"
+
+#: classes/engine.php:260
+msgid "Skipped, as Media Library is not selected."
+msgstr "건너뜀: 미디어 라이브러리를 선택하지 않습니다."
+
+#: classes/engine.php:255
+msgid "Skipped, as it is not needed for the Media Library method."
+msgstr "건너뜀: 미디어 라이브러리 방식에선 필요하지 않습니다."
+
+#. translators: %1$d is number of posts, %2$s is time in milliseconds
+#: classes/engine.php:140
+msgid "Extracted references from %1$d posts in %2$s."
+msgstr "%2$s 동안 %1$d개 글을 확인했습니다."
+
+#: classes/engine.php:69 classes/engine.php:74
+msgid "Skipped, as Content is not selected."
+msgstr "건너뜀: 내용을 선택하지 않았습니다."
+
+#. translators: %1$s is the version of the interface; %2$s is a file path.
+#: common/admin.php:503
+msgid "Thanks for using <a href=\"https://meowapps.com\">Meow Apps</a>! This is the Meow Admin %1$s <br /><i>Loaded from %2$s </i>"
+msgstr "<a href=\"https://meowapps.com\">Meow Apps</a>를 사용해 주셔서 감사합니다! Meow 관리자 %1$s입니다 <br /><i>%2$s에서 로드됨 </i>"
+
+#: common/admin.php:225 common/admin.php:242
+msgid "Pro Version"
+msgstr "Pro 버전"
+
+#: common/admin.php:418
+msgid "Remove the license"
+msgstr "라이선스 제거"
+
+#: common/admin.php:411
+msgid "<p>It looks like you are using the free version of the plugin (<b>%s</b>) but a license for the Pro version was also found. The Pro version might have been replaced by the Free version during an update (might be caused by a temporarily issue). If it is the case, <b>please download it again</b> from the <a target=\"_blank\" href=\"https://meowapps.com\">Meow Store</a>. If you wish to continue using the free version and clear this message, click on this button."
+msgstr "<p>무료 버전의 플러그인(<b>%s</b>)을 사용 중인 것 같지만 Pro 버전의 라이선스도 발견되었습니다. 업데이트 중에 Pro 버전이 무료 버전으로 대체되었을 수 있습니다(일시적인 문제로 인해 발생할 수 있음). 이 경우 <a target=\"_blank\" href=\"https://meowapps.com\">Meow Store</a>에서 <b>다시 다운로드 해주세요</b>. 무료 버전을 계속 사용하고 이 메시지를 지우려면 이 버튼을 클릭하세요."
+
+#: common/ratings.php:120
+msgid "Hide"
+msgstr "숨기기"
+
+#. translators: %1$d is a number of targets, %2$d is a number of issues, %3$s
+#. is elapsed time in milliseconds
+#: classes/rest.php:576
+msgid "Checked %1$d targets and found %2$d issues in %3$s."
+msgstr "%3$s 동안 %1$d개 대상에서 %2$d개 문제를 확인했습니다."
+
+#: classes/rest.php:425 classes/rest.php:464
+msgid "Retrieved %d targets."
+msgstr "%d개 대상을 확인했습니다."
+
+#: classes/core.php:2302
+msgid "Orphan WebP"
+msgstr "소속 미상 WebP"
+
+#: classes/rest.php:201
+msgid "Invalid Regular-Expression"
+msgstr "잘못된 정규식"
+
+#: common/admin.php:468
+msgid "<label>Hide <b>Meow Apps</b> Menu</label><br /><small>Hide Meow Apps menu and all its components, for a cleaner admin. This option will be reset if a new Meow Apps plugin is installed.<br /><b>Once activated, an option will be added in your General settings to display it again.</b></small>"
+msgstr "<label><b>Meow Apps</b> 메뉴 숨기기</label><br /><small>더 깔끔한 관리를 위해 야옹 앱 메뉴와 모든 구성요소를 숨깁니다. 이 옵션은 새 야옹 앱 플러그인을 설치하면 초기화됩니다.<br /><b>활성화하면 일반 설정에 다시 표시할 수 있는 옵션이 추가됩니다.</b></small>"
+
+#: classes/ui.php:125
+msgid "Restore with Media Cleaner"
+msgstr "Media Cleaner로 복구"
+
+#: classes/ui.php:122
+msgid "Trash with Media Cleaner"
+msgstr "Media Cleaner로 휴지통으로 이동"
+
+#: classes/ui.php:119
+msgid "Delete with Media Cleaner"
+msgstr "Media Cleaner로 삭제"
+
+#: common/admin.php:447 common/admin.php:448
+msgid "Dashboard"
+msgstr "대시보드"
+
+#. Plugin URI of the plugin
+#: media-cleaner.php
+msgid "https://meowapps.com"
+msgstr "https://meowapps.com"
+
+#. Author of the plugin
+#: media-cleaner.php
+msgid "Jordy Meow"
+msgstr "Jordy Meow"
+
+#. Plugin Name of the plugin
+#: media-cleaner.php
+msgid "Media Cleaner"
+msgstr "Media Cleaner"
+
+#: classes/core.php:2299
+msgid "Orphan Retina"
+msgstr "소속 미상 레티나"

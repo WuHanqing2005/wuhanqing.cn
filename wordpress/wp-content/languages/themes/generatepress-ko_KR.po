@@ -1,0 +1,1387 @@
+# Translation of Themes - GeneratePress in Korean
+# This file is distributed under the same license as the Themes - GeneratePress package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-27 02:16:28+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: ko_KR\n"
+"Project-Id-Version: Themes - GeneratePress\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "GeneratePress is a lightweight WordPress theme built with a focus on speed and usability. Performance is important to us, which is why a fresh GeneratePress install adds less than 10kb (gzipped) to your page size. We take full advantage of the block editor (Gutenberg), which gives you more control over creating your content. If you use page builders, GeneratePress is the right theme for you. It is completely compatible with all major page builders, including Beaver Builder and Elementor. Thanks to our emphasis on WordPress coding standards, we can boast full compatibility with all well-coded plugins, including WooCommerce. GeneratePress is fully responsive, uses valid HTML/CSS, and is translated into over 25 languages by our amazing community of users. A few of our many features include 60+ color controls, powerful dynamic typography, 5 navigation locations, 5 sidebar layouts, dropdown menus (click or hover), and 9 widget areas. Learn more and check out our powerful premium version at https://generatepress.com"
+msgstr "GeneratePress는 속도와 유용성에 중점을 둔 경량 워드프레스 테마입니다. 성능은 우리에게 중요하므로 새로운 GeneratePress 설치가 페이지 크기에 10kb(gzipped) 미만을 추가합니다. 우리는 블록 편집기(Gutenberg)를 최대한 활용하여 콘텐츠 생성에 대한 더 많은 제어를 제공합니다. 페이지 빌더를 사용하는 경우 GeneratePress가 적합한 테마입니다. Beaver Builder 및 Elementor를 포함한 모든 주요 페이지 빌더와 완벽하게 호환됩니다. WordPress 코딩 표준에 대한 강조 덕분에 우커머스를 포함하여 잘 코딩된 모든 플러그인과의 완벽한 호환성을 자랑할 수 있습니다. GeneratePress는 완벽하게 반응하고 유효한 HTML/CSS를 사용하며 놀라운 사용자 커뮤니티를 통해 25개 이상의 언어로 번역됩니다. 많은 기능 중 일부에는 60개 이상의 색상 컨트롤, 강력한 동적 타이포그래피, 5개의 탐색 위치, 5개의 사이드바 레이아웃, 드롭다운 메뉴(클릭 또는 가리키기) 및 9개의 위젯 영역이 포함됩니다. 자세한 내용을 알아보고 https://generatepress.com에서 강력한 프리미엄 버전을 확인하십시오."
+
+#. Theme Name of the theme
+#: style.css inc/class-dashboard.php:59 inc/class-dashboard.php:60
+#: inc/dashboard.php:20 inc/structure/footer.php:84
+#, gp-priority: high
+msgid "GeneratePress"
+msgstr "GeneratePress"
+
+#: inc/structure/search-modal.php:21
+msgid "Search"
+msgstr "검색"
+
+#. translators: Aria-label describing the read more button
+#: inc/structure/post-meta.php:595
+msgctxt "read more about post title"
+msgid "Read more about %s"
+msgstr "%s에 대해 더 자세히 알아보세요"
+
+#: inc/structure/search-modal.php:40
+msgid "Open search"
+msgstr "검색 열기"
+
+#: inc/customizer/fields/search-modal.php:85
+msgid "Overlay Background"
+msgstr "오버레이 배경색"
+
+#: inc/customizer/fields/search-modal.php:62
+msgid "Field Text"
+msgstr "필드 텍스트"
+
+#: inc/customizer/fields/search-modal.php:39
+msgid "Field Background"
+msgstr "필드 배경"
+
+#: inc/customizer/fields/search-modal.php:16
+msgid "Search Modal"
+msgstr "모달 검색"
+
+#: inc/customizer.php:1032
+msgid "Enable navigation search modal"
+msgstr "내비게이션  검색 모달 활성화"
+
+#: inc/class-html-attributes.php:316
+msgid "Posts"
+msgstr "글"
+
+#: inc/defaults.php:106
+msgid "Accent"
+msgstr "억양"
+
+#. translators: Base number
+#: inc/defaults.php:95 inc/defaults.php:101
+msgid "Base %s"
+msgstr "기본 %s"
+
+#: inc/defaults.php:89 assets/dist/customizer.js:1
+msgid "Base"
+msgstr "기본"
+
+#. translators: Contrast number
+#: inc/defaults.php:78 inc/defaults.php:84
+msgid "Contrast %s"
+msgstr "대비 %s"
+
+#: inc/defaults.php:72
+msgid "Contrast"
+msgstr "대조"
+
+#: inc/customizer/fields/sidebar-widgets.php:16
+msgid "Sidebar Widgets"
+msgstr "사이드바 위젯"
+
+#: inc/customizer/fields/primary-navigation.php:153
+msgid "Sub-Menu Text Current"
+msgstr "하위 메뉴 텍스트 현재"
+
+#: inc/customizer/fields/primary-navigation.php:145
+msgid "Sub-Menu Text Hover"
+msgstr "하위 메뉴 텍스트 마우스 오버"
+
+#: inc/customizer/fields/primary-navigation.php:137
+msgid "Sub-Menu Text"
+msgstr "하위 메뉴 텍스트"
+
+#: inc/customizer/fields/primary-navigation.php:120
+msgid "Sub-Menu Background Current"
+msgstr "하위 메뉴 배경 현재"
+
+#: inc/customizer/fields/primary-navigation.php:112
+msgid "Sub-Menu Background Hover"
+msgstr "서브메뉴 배경 마우스 오버"
+
+#: inc/customizer/fields/primary-navigation.php:104
+msgid "Sub-Menu Background"
+msgstr "하위 메뉴 배경"
+
+#: inc/customizer/fields/primary-navigation.php:87
+msgid "Navigation Text Current"
+msgstr "내비게이션 텍스트 현재"
+
+#: inc/customizer/fields/primary-navigation.php:79
+msgid "Navigation Text Hover"
+msgstr "내비게이션 텍스트 마우스 오버"
+
+#: inc/customizer/fields/primary-navigation.php:71
+msgid "Navigation Text"
+msgstr "내비게이션 텍스트"
+
+#: inc/customizer/fields/primary-navigation.php:55
+#: inc/customizer/fields/primary-navigation.php:88
+#: inc/customizer/fields/primary-navigation.php:121
+#: inc/customizer/fields/primary-navigation.php:154
+msgid "Choose Current Color"
+msgstr "현재 색상 선택"
+
+#: inc/customizer/fields/primary-navigation.php:54
+msgid "Navigation Background Current"
+msgstr "내비게이션 배경 현재"
+
+#: inc/customizer/fields/primary-navigation.php:46
+msgid "Navigation Background Hover"
+msgstr "내비게이션 배경 마우스 오버"
+
+#: inc/customizer/fields/primary-navigation.php:38
+msgid "Navigation Background"
+msgstr "내비게이션 배경"
+
+#: inc/customizer/fields/header.php:168
+msgid "Tagline"
+msgstr "태그라인"
+
+#: inc/customizer/fields/header.php:145 assets/dist/customizer.js:1
+msgid "Site Title"
+msgstr "사이트 제목"
+
+#: inc/customizer/fields/forms.php:210
+msgid "Border Focus"
+msgstr "테두리 초점"
+
+#: inc/customizer/fields/forms.php:184
+msgid "Border"
+msgstr "테두리"
+
+#: inc/customizer/fields/forms.php:143
+msgid "Text Focus"
+msgstr "텍스트 포커스"
+
+#: inc/customizer/fields/forms.php:82 inc/customizer/fields/forms.php:148
+#: inc/customizer/fields/forms.php:216
+msgid "Choose Focus Color"
+msgstr "포커스 색상 선택"
+
+#: inc/customizer/fields/forms.php:76
+msgid "Background Focus"
+msgstr "배경 초점"
+
+#: inc/customizer/fields/forms.php:16
+msgid "Forms"
+msgstr "양식"
+
+#: inc/customizer/fields/footer-widgets.php:149
+#: inc/customizer/fields/sidebar-widgets.php:149
+msgid "Widget Title"
+msgstr "위젯 제목"
+
+#: inc/customizer/fields/content.php:344
+msgid "Heading 6 (H6) Color"
+msgstr "제목 6 (H6) 색상"
+
+#: inc/customizer/fields/content.php:339
+msgid "Heading 5 (H5) Color"
+msgstr "헤딩 5 (H5) 색상"
+
+#: inc/customizer/fields/content.php:334
+msgid "Heading 4 (H4) Color"
+msgstr "헤딩 4 (H4) 색상"
+
+#: inc/customizer/fields/content.php:329
+msgid "Heading 3 (H3) Color"
+msgstr "헤딩 3 (H3) 색상"
+
+#: inc/customizer/fields/content.php:324
+msgid "Heading 2 (H2) Color"
+msgstr "제목 2 (H2) 색상"
+
+#: inc/customizer/fields/content.php:319
+msgid "Heading 1 (H1) Color"
+msgstr "제목 1 (H1) 색상"
+
+#: inc/customizer/fields/content.php:299
+msgid "Entry Meta Links Hover"
+msgstr "항목 메타 링크 마우스 오버"
+
+#: inc/customizer/fields/content.php:274
+msgid "Entry Meta Links"
+msgstr "항목 메타 링크"
+
+#: inc/customizer/fields/content.php:236
+msgid "Entry Meta Text"
+msgstr "항목 메타 텍스트"
+
+#: inc/customizer/fields/content.php:210
+msgid "Archive Content Title Hover"
+msgstr "아카이브 콘텐츠 제목 마우스 오버"
+
+#: inc/customizer/fields/content.php:185
+msgid "Archive Content Title"
+msgstr "아카이브 콘텐츠 제목"
+
+#: inc/customizer/fields/buttons.php:16 assets/dist/customizer.js:1
+msgid "Buttons"
+msgstr "버튼"
+
+#: inc/customizer/fields/body.php:150
+msgid "Choose Visited Color"
+msgstr "방문한 색상 선택"
+
+#: inc/customizer/fields/body.php:119 inc/customizer/fields/content.php:121
+#: inc/customizer/fields/footer-bar.php:123
+#: inc/customizer/fields/footer-widgets.php:123
+#: inc/customizer/fields/header.php:119
+#: inc/customizer/fields/sidebar-widgets.php:123
+#: inc/customizer/fields/top-bar.php:123
+msgid "Link Hover"
+msgstr "링크 마우스 오버"
+
+#: inc/customizer/fields/body.php:94 inc/customizer/fields/content.php:96
+#: inc/customizer/fields/footer-bar.php:98
+#: inc/customizer/fields/footer-widgets.php:98
+#: inc/customizer/fields/header.php:94
+#: inc/customizer/fields/sidebar-widgets.php:98
+#: inc/customizer/fields/top-bar.php:97
+msgid "Link"
+msgstr "링크"
+
+#: inc/customizer/fields/back-to-top.php:147
+#: inc/customizer/fields/buttons.php:148
+msgid "Text Hover"
+msgstr "텍스트 마우스 오버"
+
+#: inc/customizer/fields/back-to-top.php:86
+#: inc/customizer/fields/back-to-top.php:152 inc/customizer/fields/body.php:123
+#: inc/customizer/fields/buttons.php:87 inc/customizer/fields/buttons.php:153
+#: inc/customizer/fields/content.php:125 inc/customizer/fields/content.php:214
+#: inc/customizer/fields/content.php:303
+#: inc/customizer/fields/footer-bar.php:128
+#: inc/customizer/fields/footer-widgets.php:128
+#: inc/customizer/fields/header.php:124
+#: inc/customizer/fields/primary-navigation.php:47
+#: inc/customizer/fields/primary-navigation.php:80
+#: inc/customizer/fields/primary-navigation.php:113
+#: inc/customizer/fields/primary-navigation.php:146
+#: inc/customizer/fields/sidebar-widgets.php:128
+#: inc/customizer/fields/top-bar.php:128
+msgid "Choose Hover Color"
+msgstr "마우스 오버 색상 선택"
+
+#: inc/customizer/fields/back-to-top.php:60
+#: inc/customizer/fields/back-to-top.php:127 inc/customizer/fields/body.php:98
+#: inc/customizer/fields/buttons.php:61 inc/customizer/fields/buttons.php:128
+#: inc/customizer/fields/content.php:100 inc/customizer/fields/content.php:189
+#: inc/customizer/fields/content.php:278
+#: inc/customizer/fields/footer-bar.php:38
+#: inc/customizer/fields/footer-bar.php:63
+#: inc/customizer/fields/footer-bar.php:103
+#: inc/customizer/fields/footer-widgets.php:38
+#: inc/customizer/fields/footer-widgets.php:63
+#: inc/customizer/fields/footer-widgets.php:103
+#: inc/customizer/fields/forms.php:56 inc/customizer/fields/forms.php:123
+#: inc/customizer/fields/forms.php:190 inc/customizer/fields/header.php:99
+#: inc/customizer/fields/primary-navigation.php:39
+#: inc/customizer/fields/primary-navigation.php:72
+#: inc/customizer/fields/primary-navigation.php:105
+#: inc/customizer/fields/primary-navigation.php:138
+#: inc/customizer/fields/sidebar-widgets.php:38
+#: inc/customizer/fields/sidebar-widgets.php:63
+#: inc/customizer/fields/sidebar-widgets.php:103
+#: inc/customizer/fields/top-bar.php:102
+msgid "Choose Initial Color"
+msgstr "초기 색상 선택"
+
+#: inc/customizer/fields/back-to-top.php:16
+msgid "Back to Top"
+msgstr "맨 위로"
+
+#. translators: Learn more here
+#: inc/customizer.php:1564
+msgid "Switching to our dynamic typography system can change how your fonts display. Review your website thoroughly before publishing this change. Learn more %s."
+msgstr "동적 타이포그래피 시스템으로 전환하면 글꼴 표시 방식이 변경될 수 있습니다. 이 변경 사항을 공개하기 전에 웹사이트를 철저히 검토하세요. 더 알아보기 %s."
+
+#: inc/customizer.php:1561
+msgid "Use dynamic typography system"
+msgstr "동적 타이포그래피 시스템 사용"
+
+#: inc/customizer.php:1490
+msgid "Never"
+msgstr "절대"
+
+#: inc/customizer.php:1489
+msgid "Not on hover"
+msgstr "마우스 오버 아님"
+
+#: inc/customizer.php:1488
+msgid "On hover"
+msgstr "마우스 오버 시"
+
+#: inc/customizer.php:1487
+msgid "Always"
+msgstr "항상"
+
+#: inc/customizer.php:1484
+msgid "Add underlines to your links in your main content areas."
+msgstr "주요 콘텐츠 영역의 링크에 밑줄을 추가하세요."
+
+#: inc/customizer.php:1483
+msgid "Underline Links"
+msgstr "링크 밑줄"
+
+#: inc/customizer.php:489
+msgid "Configure"
+msgstr "구성"
+
+#: inc/customizer.php:424
+msgid "Typography Manager"
+msgstr "타이포그래피 관리자"
+
+#: inc/customizer.php:402
+msgid "Optional"
+msgstr "옵션"
+
+#: inc/customizer.php:401
+msgid "Fallback"
+msgstr "대체"
+
+#: inc/customizer.php:400
+msgid "Swap"
+msgstr "교환"
+
+#: inc/customizer.php:399
+msgid "Block"
+msgstr "블록"
+
+#: inc/customizer.php:398
+msgid "Auto"
+msgstr "자동"
+
+#: inc/customizer.php:394
+msgid "Learn about font-display"
+msgstr "글꼴-표시에 대해 알아보기"
+
+#: inc/customizer.php:390
+msgid "Google font-display"
+msgstr "Google 글꼴-표시"
+
+#: inc/customizer.php:375
+msgid "Choose Font"
+msgstr "글꼴 선택"
+
+#: inc/customizer.php:330
+msgid "Font Manager"
+msgstr "글꼴 관리자"
+
+#: inc/customizer.php:281 assets/dist/customizer.js:1
+msgid "Choose Color"
+msgstr "색상 선택"
+
+#: inc/customizer.php:244
+msgid "Global Colors"
+msgstr "글로벌 색상"
+
+#: inc/class-rest.php:96 assets/dist/dashboard.js:1
+msgid "Settings reset."
+msgstr "설정이 초기화되었습니다."
+
+#: inc/class-html-attributes.php:461
+msgid "Entry meta"
+msgstr "항목 메타"
+
+#: inc/class-html-attributes.php:448
+msgid "Comment meta"
+msgstr "댓글 메타"
+
+#: inc/class-html-attributes.php:319
+msgid "Archive Page"
+msgstr "아카이브 페이지"
+
+#: inc/class-html-attributes.php:302
+msgid "Page"
+msgstr "페이지"
+
+#: inc/class-html-attributes.php:244
+msgid "Mobile Toggle"
+msgstr "모바일 토글"
+
+#: inc/class-html-attributes.php:214
+msgid "Primary"
+msgstr "기본"
+
+#: inc/class-html-attributes.php:171 inc/class-html-attributes.php:257
+msgid "Site"
+msgstr "사이트"
+
+#: inc/class-dashboard.php:123
+msgid "Dashboard"
+msgstr "대시보드"
+
+#: inc/meta-box.php:176
+msgid "Choose your content container type."
+msgstr "콘텐츠 컨테이너 유형을 선택하세요."
+
+#: inc/meta-box.php:105 inc/meta-box.php:173
+msgid "Content Container"
+msgstr "콘텐츠 컨테이너"
+
+#: inc/general.php:78 inc/general.php:94
+msgid "Close Sub-Menu"
+msgstr "하위 메뉴 닫기"
+
+#: inc/general.php:77 inc/general.php:93 inc/structure/navigation.php:377
+#: inc/structure/navigation.php:459
+msgid "Open Sub-Menu"
+msgstr "하위 메뉴 열기"
+
+#: inc/structure/footer.php:83
+msgctxt "GeneratePress"
+msgid "Built with"
+msgstr "제작됨"
+
+#: inc/structure/post-meta.php:112
+msgctxt "prepends the pagination page number for screen readers"
+msgid "Page"
+msgstr "페이지"
+
+#. translators: right arrow
+#: inc/structure/post-meta.php:106
+msgid "Next %s"
+msgstr "다음 %s"
+
+#. translators: left arrow
+#: inc/structure/post-meta.php:98
+msgid "%s Previous"
+msgstr "%s 이전"
+
+#: inc/customizer.php:1439 inc/customizer.php:1565
+msgid "here"
+msgstr "여기"
+
+#. translators: Learn more here
+#: inc/customizer.php:1438
+msgid "Switching your structure can change how your website displays. Review your website thoroughly before publishing this change, or use a staging site to review the potential changes. Learn more %s."
+msgstr "구조를 변경하면 웹사이트 표시 방식이 달라질 수 있습니다. 이 변경 사항을 공개하기 전에 웹사이트를 철저히 검토하거나 스테이징 사이트를 사용하여 잠재적인 변경 사항을 검토하세요. 더 알아보기 %s."
+
+#: inc/customizer.php:1435
+msgid "Caution:"
+msgstr "주의:"
+
+#: inc/customizer.php:1431
+msgid "Floats"
+msgstr "플로트"
+
+#: inc/customizer.php:1430
+msgid "Flexbox"
+msgstr "플렉스박스"
+
+#: inc/customizer.php:1427
+msgid "Structure"
+msgstr "구조"
+
+#: inc/customizer.php:1345
+msgid "Full Content"
+msgstr "전체 콘텐츠"
+
+#: inc/customizer.php:666
+msgid "Navigation After"
+msgstr "내비게이션 후"
+
+#: inc/customizer.php:665
+msgid "Navigation Before"
+msgstr "이전 내비게이션"
+
+#: inc/customizer.php:664
+msgid "Classic"
+msgstr "클래식"
+
+#: inc/general.php:113
+msgid "Close Search Bar"
+msgstr "검색막대 닫기"
+
+#: inc/general.php:112 inc/structure/navigation.php:194
+#: inc/structure/navigation.php:553 inc/structure/navigation.php:594
+#: inc/structure/navigation.php:635
+msgid "Open Search Bar"
+msgstr "검색막대 열기"
+
+#: inc/customizer.php:1510
+msgid "Reduce the number of CSS file requests and use a lite version of our grid system."
+msgstr "CSS 파일 요청수를 줄이고, 그리드 시스템의 라이트 버전을 사용하세요."
+
+#: inc/customizer.php:1509
+msgid "Combine CSS"
+msgstr "CSS 합치기"
+
+#: inc/customizer.php:1464
+msgid "Font"
+msgstr "글꼴"
+
+#: inc/customizer.php:1463
+msgid "SVG"
+msgstr "SVG"
+
+#: inc/customizer.php:1460
+msgid "Icon Type"
+msgstr "아이콘 유형"
+
+#: inc/customizer.php:1082 inc/customizer/fields/back-to-top.php:122
+#: inc/customizer/fields/body.php:55 inc/customizer/fields/buttons.php:123
+#: inc/customizer/fields/content.php:58 inc/customizer/fields/footer-bar.php:58
+#: inc/customizer/fields/footer-widgets.php:58
+#: inc/customizer/fields/forms.php:118 inc/customizer/fields/header.php:56
+#: inc/customizer/fields/primary-navigation.php:207
+#: inc/customizer/fields/sidebar-widgets.php:58
+#: inc/customizer/fields/top-bar.php:58
+msgid "Text"
+msgstr "텍스트"
+
+#: inc/customizer.php:1081
+msgid "Boxes"
+msgstr "상자"
+
+#: inc/customizer.php:1078
+msgid "Container Alignment"
+msgstr "컨테이너 정렬"
+
+#: inc/customizer.php:226
+msgid "Place logo next to title"
+msgstr "제목 옆에 로고 넣기"
+
+#: inc/typography.php:659 assets/dist/customizer.js:1
+msgid "Heading 3 (H3)"
+msgstr "헤딩 3 (H3)"
+
+#: inc/typography.php:512 assets/dist/customizer.js:1
+msgid "Heading 2 (H2)"
+msgstr "헤딩 2 (H2)"
+
+#: inc/typography.php:365 assets/dist/customizer.js:1
+msgid "Heading 1 (H1)"
+msgstr "헤딩 1(H1)"
+
+#: inc/dashboard.php:261
+msgid "Reset Settings"
+msgstr "설정 초기화"
+
+#: inc/dashboard.php:247
+msgid "Visit documentation &rarr;"
+msgstr "문서 방문 &rarr;"
+
+#: inc/dashboard.php:246
+msgid "Want to learn more about the theme? Check out our extensive documentation."
+msgstr "테마에 대해 더 알고 싶나요? 더 자세한 자료를 확인하세요."
+
+#: inc/dashboard.php:231 assets/dist/dashboard.js:1
+msgid "Start Customizing"
+msgstr "사용자 설정 시작"
+
+#: inc/dashboard.php:221
+msgid "All Options"
+msgstr "모든 옵션"
+
+#: inc/dashboard.php:216 assets/dist/dashboard.js:1
+msgid "Layout Options"
+msgstr "레이아웃 옵션"
+
+#: inc/dashboard.php:211
+msgid "Customize Colors"
+msgstr "사용자 정의 색상"
+
+#: inc/dashboard.php:206
+msgid "Customize Fonts"
+msgstr "사용자 정의 폰트"
+
+#: inc/dashboard.php:201
+msgid "Upload Logo"
+msgstr "로고 업로드"
+
+#: inc/customizer.php:981
+msgid "Dropdown Direction"
+msgstr "드롭다운 방향"
+
+#: inc/customizer.php:924
+msgid "The width when the navigation ceases to float and drops below your logo."
+msgstr "내비게이션이 더 이상 떠 있지 않고 로고 아래로 내려갈 때의 너비."
+
+#: inc/customizer.php:923
+msgid "Navigation Drop Point"
+msgstr "내비게이션 드롭 포인트"
+
+#: inc/customizer.php:669
+msgid "Navigation Left"
+msgstr "내비게이션 왼쪽"
+
+#: inc/customizer.php:668
+msgid "Navigation After - Centered"
+msgstr "내비게이션 후 - 가운데 정렬"
+
+#: inc/customizer.php:667
+msgid "Navigation Before - Centered"
+msgstr "내비게이션 이전 - 가운데 정렬"
+
+#: inc/customizer.php:659
+msgid "Header Presets"
+msgstr "헤더 프리셋"
+
+#: inc/customizer.php:662
+msgid "Current"
+msgstr "현재"
+
+#: inc/customizer.php:194
+msgid "Logo Width"
+msgstr "로고 너비"
+
+#: inc/structure/navigation.php:665
+msgid "Mobile Menu"
+msgstr "모바일 메뉴"
+
+#: inc/meta-box.php:196
+msgid "Premium module available"
+msgstr "프리미엄 모듈 사용 가능"
+
+#: inc/dashboard.php:263
+msgid "Deleting your settings can not be undone."
+msgstr "설정을 삭제한 뒤에는 취소할 수 없습니다."
+
+#: inc/dashboard.php:157
+msgid "Premium Modules"
+msgstr "프리미엄 모듈"
+
+#: inc/customizer.php:1530
+msgid "Cache CSS generated by your options to boost performance."
+msgstr "성능 향상을 위해 옵션으로 생성된 CSS를 캐시하십시오."
+
+#: inc/customizer.php:1529
+msgid "Cache dynamic CSS"
+msgstr "동적 CSS 캐시"
+
+#: inc/customizer.php:1394
+msgid "Load essential Font Awesome icons instead of the full library."
+msgstr "전체 라이브러리 대신 필수 폰트 어썸 아이콘을 불러옵니다."
+
+#: inc/customizer.php:1393
+msgid "Load essential icons only"
+msgstr "필수 아이콘만 불러오기"
+
+#: inc/customizer.php:1374
+msgid "General"
+msgstr "일반"
+
+#: inc/customizer.php:1346
+msgid "Excerpt"
+msgstr "발췌"
+
+#: inc/customizer.php:1342
+msgid "Content Type"
+msgstr "컨텐츠 유형"
+
+#: inc/customizer.php:1362 inc/typography.php:747
+msgid "More options are available for this section in our premium version."
+msgstr "이 섹션에 대한 더 많은 옵션은 프리미엄 버전에서 이용 가능합니다."
+
+#: inc/customizer.php:171
+msgid "Retina Logo"
+msgstr "레티나 로고"
+
+#: inc/customizer.php:86
+msgid "Premium Modules Available"
+msgstr "이용가능한 프리미엄 모듈"
+
+#: inc/customizer/controls/class-typography-control.php:80
+#: assets/dist/customizer.js:3
+msgid "Variants"
+msgstr "변형"
+
+#: inc/customizer/controls/class-typography-control.php:73
+#: assets/dist/customizer.js:3
+msgid "System fonts"
+msgstr "시스템 글꼴"
+
+#: inc/structure/comments.php:156
+msgid "Comment"
+msgstr "댓글"
+
+#: inc/customizer/controls/class-range-control.php:71
+#: assets/dist/customizer.js:1
+msgid "Mobile"
+msgstr "모바일"
+
+#: inc/customizer/controls/class-range-control.php:70
+#: assets/dist/customizer.js:1
+msgid "Tablet"
+msgstr "태블릿"
+
+#: inc/customizer/controls/class-range-control.php:69
+#: assets/dist/customizer.js:1
+msgid "Desktop"
+msgstr "데스크톱"
+
+#: inc/meta-box.php:181
+msgid "Full Width"
+msgstr "전체 넓이"
+
+#: inc/customizer.php:623
+msgid "Top Bar Alignment"
+msgstr "상단 바 정렬"
+
+#: inc/customizer.php:597
+msgid "Top Bar Inner Width"
+msgstr "상단 바 안쪽 너비"
+
+#: inc/customizer.php:571
+msgid "Top Bar Width"
+msgstr "상단 막대 너비"
+
+#: inc/customizer.php:551 inc/customizer/fields/top-bar.php:16
+#: inc/general.php:162 assets/dist/customizer.js:1
+msgid "Top Bar"
+msgstr "상단 막대"
+
+#: inc/customizer.php:1361 inc/dashboard.php:168 inc/typography.php:746
+msgid "Learn more"
+msgstr "더 알아보기"
+
+#: inc/class-dashboard.php:147 inc/dashboard.php:56
+msgid "Documentation"
+msgstr "문서"
+
+#: inc/class-dashboard.php:132 inc/dashboard.php:53
+msgid "Premium"
+msgstr "프리미엄"
+
+#: inc/customizer.php:1283
+msgid "Footer Bar Alignment"
+msgstr "하단 막대 정렬"
+
+#: inc/customizer/fields/footer-bar.php:16 inc/general.php:161
+#: assets/dist/customizer.js:1
+msgid "Footer Bar"
+msgstr "하단 막대"
+
+#: inc/customizer.php:1230
+msgid "Inner Footer Width"
+msgstr "내측 푸터 너비"
+
+#: inc/customizer.php:842
+msgid "Inner Navigation Width"
+msgstr "내측 네비게이션 너비"
+
+#: inc/customizer.php:757
+msgid "Inner Header Width"
+msgstr "내측 헤더 너비"
+
+#: inc/typography.php:297
+msgid "Paragraph margin"
+msgstr "문단 여백"
+
+#: inc/typography.php:263 inc/typography.php:444 inc/typography.php:591
+#: inc/typography.php:720
+msgid "Line height"
+msgstr "줄간격"
+
+#: inc/customizer/controls/class-range-control.php:72 inc/dashboard.php:272
+#: assets/dist/dashboard.js:1
+msgid "Reset"
+msgstr "초기화"
+
+#: inc/customizer.php:1185 assets/dist/customizer.js:1
+msgid "Footer"
+msgstr "푸터"
+
+#: inc/customizer.php:1092 inc/meta-box.php:90
+msgid "Sidebars"
+msgstr "사이드바"
+
+#: inc/customizer.php:797 inc/customizer/fields/primary-navigation.php:23
+#: assets/dist/customizer.js:1
+msgid "Primary Navigation"
+msgstr "기본 내비게이션"
+
+#: inc/customizer.php:507
+msgid "Container"
+msgstr "컨테이너"
+
+#: inc/structure/footer.php:228
+msgid "Scroll back to top"
+msgstr "스크롤해서 다시 올라가기"
+
+#: inc/customizer.php:1309
+msgid "Back to Top Button"
+msgstr "맨 위로 버튼"
+
+#: inc/customizer.php:1205
+msgid "Footer Width"
+msgstr "푸터 너비"
+
+#: inc/customizer.php:961
+msgid "Click - Arrow"
+msgstr "클릭 - 화살표"
+
+#: inc/customizer.php:960
+msgid "Click - Menu Item"
+msgstr "클릭 - 메뉴 아이템"
+
+#: inc/customizer.php:959
+msgid "Hover"
+msgstr "마우스 오버"
+
+#: inc/customizer.php:956
+msgid "Navigation Dropdown"
+msgstr "네비게이션 드롭다운"
+
+#: inc/customizer.php:817
+msgid "Navigation Width"
+msgstr "네비게이션 너비"
+
+#: inc/customizer.php:574 inc/customizer.php:600 inc/customizer.php:735
+#: inc/customizer.php:761 inc/customizer.php:820 inc/customizer.php:846
+#: inc/customizer.php:1208 inc/customizer.php:1234
+msgid "Full"
+msgstr "모두"
+
+#: inc/customizer.php:732
+msgid "Header Width"
+msgstr "헤더 너비"
+
+#. translators: %s: Heart icon
+#: inc/dashboard.php:302
+msgctxt "made with love"
+msgid "Made with %s by Tom Usborne"
+msgstr "Tom Usborne이 %s로 제작"
+
+#: inc/customizer.php:899
+msgid "Float Left"
+msgstr "좌측에 띄우기"
+
+#: inc/class-dashboard.php:140 inc/dashboard.php:55
+msgid "Support"
+msgstr "지원"
+
+#: inc/customizer/fields/content.php:147 inc/meta-box.php:189
+#: inc/meta-box.php:191
+msgid "Content Title"
+msgstr "컨텐츠 제목"
+
+#: content-404.php:51
+msgid "It looks like nothing was found at this location. Maybe try searching?"
+msgstr "이 위치에서 아무 것도 발견되지 않은 것 같습니다. 검색을 시도할까요?"
+
+#: inc/structure/search-modal.php:104 searchform.php:15
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "검색 &hellip;"
+
+#: inc/structure/search-modal.php:102 searchform.php:14 searchform.php:15
+msgctxt "label"
+msgid "Search for:"
+msgstr "검색:"
+
+#. translators: 1: Search query name
+#: inc/structure/archives.php:136
+msgid "Search Results for: %s"
+msgstr "검색 결과 : %s"
+
+#: no-results.php:62
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "찾고 있는 것을 찾을 수 없는 것 같습니다. 검색이 도움될 수도 있습니다."
+
+#: no-results.php:57
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "죄송하지만 검색어와 일치하는 것이 없습니다. 다른 검색어로 다시 시도해보세요."
+
+#. translators: 1: Admin URL
+#: no-results.php:49
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "첫번째 글을 발행할 준비가 됐나요? <a href=\"%1$s\">여기서 시작하세요</a>."
+
+#: no-results.php:27
+msgid "Nothing Found"
+msgstr "찾지 못함"
+
+#: inc/structure/post-meta.php:274
+msgid "% Comments"
+msgstr "댓글 %개"
+
+#: inc/structure/post-meta.php:274
+msgid "1 Comment"
+msgstr "댓글 한 개"
+
+#: inc/structure/post-meta.php:274
+msgid "Leave a comment"
+msgstr "댓글 남기기"
+
+#: inc/structure/post-meta.php:258
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr "태그"
+
+#: inc/structure/post-meta.php:241
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr "카테고리"
+
+#: inc/structure/post-meta.php:233 inc/structure/post-meta.php:250
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: inc/structure/navigation.php:490
+msgctxt "label"
+msgid "Search"
+msgstr "검색"
+
+#: inc/structure/post-meta.php:581
+msgid "Read more"
+msgstr "더 읽기"
+
+#. translators: 1: Author name
+#: inc/structure/post-meta.php:222
+msgid "View all posts by %s"
+msgstr "%s 의 모든 글 보기"
+
+#: inc/structure/post-meta.php:301
+msgid "by"
+msgstr "작성자:"
+
+#: inc/structure/comments.php:91
+msgid "Your comment is awaiting moderation."
+msgstr "입력하신 댓글은 검토를 기다리고 있습니다."
+
+#. translators: 1: date, 2: time
+#: inc/structure/comments.php:71
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: inc/structure/comments.php:28
+msgid "Pingback:"
+msgstr "핑백:"
+
+#: inc/structure/post-meta.php:85
+msgid "Newer posts"
+msgstr "새 글"
+
+#: inc/structure/post-meta.php:76
+msgid "Older posts"
+msgstr "이전 글"
+
+#: inc/structure/post-meta.php:85
+msgid "Next"
+msgstr "다음"
+
+#: inc/structure/post-meta.php:76
+msgid "Previous"
+msgstr "이전"
+
+#: inc/deprecated.php:31
+msgid "Next &rarr;"
+msgstr "다음 &rarr;"
+
+#: inc/deprecated.php:30
+msgid "&larr; Previous"
+msgstr "&larr; 이전"
+
+#: inc/dashboard.php:373
+msgid "Settings removed."
+msgstr "설정을 삭제했습니다."
+
+#: inc/dashboard.php:368
+msgid "Import successful."
+msgstr "성공적으로 가져왔습니다."
+
+#: inc/dashboard.php:363
+msgid "Settings saved."
+msgstr "설정 저장됨."
+
+#: inc/customizer/fields/back-to-top.php:54 inc/customizer/fields/body.php:32
+#: inc/customizer/fields/buttons.php:55 inc/customizer/fields/content.php:34
+#: inc/customizer/fields/footer-bar.php:32
+#: inc/customizer/fields/footer-widgets.php:32
+#: inc/customizer/fields/forms.php:50 inc/customizer/fields/header.php:32
+#: inc/customizer/fields/primary-navigation.php:189
+#: inc/customizer/fields/sidebar-widgets.php:32
+#: inc/customizer/fields/top-bar.php:32
+msgid "Background"
+msgstr "배경"
+
+#: inc/meta-box.php:100 inc/meta-box.php:186
+msgid "Disable Elements"
+msgstr "요소 사용 안하기"
+
+#: inc/dashboard.php:268
+msgid "Warning: This will delete your settings."
+msgstr "경고: 설정을 삭제합니다."
+
+#: inc/dashboard.php:93
+msgid "Customize"
+msgstr "사용자 정의하기"
+
+#: inc/structure/search-modal.php:105 searchform.php:21 searchform.php:27
+msgctxt "submit button"
+msgid "Search"
+msgstr "검색"
+
+#: inc/structure/header.php:379 inc/structure/header.php:380
+msgid "Skip to content"
+msgstr "컨텐츠로 건너뛰기"
+
+#: inc/structure/navigation.php:50 inc/structure/navigation.php:60
+#: inc/structure/navigation.php:139 inc/structure/navigation.php:155
+msgid "Menu"
+msgstr "메뉴"
+
+#: inc/meta-box.php:168
+msgid "5 Widgets"
+msgstr "5개의 위젯"
+
+#: inc/meta-box.php:167
+msgid "4 Widgets"
+msgstr "4개의 위젯"
+
+#: inc/meta-box.php:166
+msgid "3 Widgets"
+msgstr "3개의 위젯"
+
+#: inc/meta-box.php:165
+msgid "2 Widgets"
+msgstr "2개의 위젯"
+
+#: inc/meta-box.php:164
+msgid "1 Widgets"
+msgstr "1개의 위젯"
+
+#: inc/meta-box.php:163
+msgid "0 Widgets"
+msgstr "0개의 위젯"
+
+#: inc/meta-box.php:152
+msgid "Both Sidebars on Right"
+msgstr "오른쪽의 양쪽 사이드바"
+
+#: inc/meta-box.php:151
+msgid "Both Sidebars on Left"
+msgstr "왼쪽의 양쪽 사이드바"
+
+#: inc/meta-box.php:150
+msgid "Both Sidebars"
+msgstr "양쪽 사이드바"
+
+#: inc/meta-box.php:149
+msgid "No Sidebars"
+msgstr "사이드바 없음"
+
+#: inc/customizer/fields/content.php:16 assets/dist/customizer.js:1
+msgid "Content"
+msgstr "내용"
+
+#: inc/customizer.php:663 inc/meta-box.php:146 inc/meta-box.php:162
+#: inc/meta-box.php:180 assets/dist/customizer.js:1 assets/dist/customizer.js:3
+msgid "Default"
+msgstr "기본"
+
+#: inc/customizer.php:1323
+msgid "Blog"
+msgstr "블로그"
+
+#: inc/customizer.php:1254 inc/customizer/fields/footer-widgets.php:16
+#: inc/meta-box.php:95 inc/meta-box.php:159
+msgid "Footer Widgets"
+msgstr "푸터 위젯"
+
+#: inc/customizer.php:1167
+msgid "Single Post Sidebar Layout"
+msgstr "단일 포스트 사이드바 레이아웃"
+
+#: inc/customizer.php:1139
+msgid "Blog Sidebar Layout"
+msgstr "블로그 사이드바 레이아웃"
+
+#: inc/customizer.php:1119 inc/customizer.php:1147 inc/customizer.php:1175
+msgid "Content / Sidebar / Sidebar"
+msgstr "내용 / 사이드바 / 사이드바"
+
+#: inc/customizer.php:1118 inc/customizer.php:1146 inc/customizer.php:1174
+msgid "Sidebar / Sidebar / Content"
+msgstr "사이드바 / 사이드바 / 내용"
+
+#: inc/customizer.php:1117 inc/customizer.php:1145 inc/customizer.php:1173
+msgid "Sidebar / Content / Sidebar"
+msgstr "사이드바 / 내용 / 사이드바"
+
+#: inc/customizer.php:1116 inc/customizer.php:1144 inc/customizer.php:1172
+msgid "Content (no sidebars)"
+msgstr "내용만 (사이드바 없음)"
+
+#: inc/customizer.php:1115 inc/customizer.php:1143 inc/customizer.php:1171
+msgid "Content / Sidebar"
+msgstr "내용 / 사이드바"
+
+#: inc/customizer.php:1114 inc/customizer.php:1142 inc/customizer.php:1170
+msgid "Sidebar / Content"
+msgstr "사이드바 / 내용"
+
+#: inc/customizer.php:1111 inc/meta-box.php:143
+msgid "Sidebar Layout"
+msgstr "사이드바 레이아웃"
+
+#: inc/customizer.php:1058
+msgid "One Container"
+msgstr "하나의 컨테이너"
+
+#: inc/customizer.php:1057
+msgid "Separate Containers"
+msgstr "컨테이너 분리"
+
+#: inc/customizer.php:1054
+msgid "Content Layout"
+msgstr "콘텐츠 레이아웃"
+
+#: inc/customizer.php:1009 inc/customizer.php:1313
+msgid "Disable"
+msgstr "비활성화됨"
+
+#: inc/customizer.php:1008 inc/customizer.php:1312
+msgid "Enable"
+msgstr "사용가능"
+
+#: inc/customizer.php:1005 inc/customizer/fields/primary-navigation.php:166
+msgid "Navigation Search"
+msgstr "내비게이션 검색"
+
+#: inc/customizer.php:867
+msgid "Navigation Alignment"
+msgstr "네비게이션 정렬"
+
+#: inc/customizer.php:902
+msgid "No Navigation"
+msgstr "네비게이션 없음"
+
+#: inc/customizer.php:898
+msgid "Float Right"
+msgstr "오른쪽에 띄우기"
+
+#: inc/customizer.php:897
+msgid "Above Header"
+msgstr "헤더 위"
+
+#: inc/customizer.php:896
+msgid "Below Header"
+msgstr "헤더 아래"
+
+#: inc/customizer.php:893
+msgid "Navigation Location"
+msgstr "네비게이션 위치"
+
+#: inc/customizer.php:628 inc/customizer.php:787 inc/customizer.php:872
+#: inc/customizer.php:984 inc/customizer.php:1288
+msgid "Right"
+msgstr "오른쪽"
+
+#: inc/customizer.php:627 inc/customizer.php:786 inc/customizer.php:871
+#: inc/customizer.php:1287
+msgid "Center"
+msgstr "중앙"
+
+#: inc/customizer.php:626 inc/customizer.php:785 inc/customizer.php:870
+#: inc/customizer.php:985 inc/customizer.php:1286
+msgid "Left"
+msgstr "왼쪽"
+
+#: inc/customizer.php:782
+msgid "Header Alignment"
+msgstr "헤더 정렬"
+
+#: inc/customizer.php:575 inc/customizer.php:601 inc/customizer.php:736
+#: inc/customizer.php:760 inc/customizer.php:821 inc/customizer.php:845
+#: inc/customizer.php:1209 inc/customizer.php:1233 inc/meta-box.php:182
+msgid "Contained"
+msgstr "포함됨"
+
+#: inc/customizer.php:529
+msgid "Container Width"
+msgstr "컨테이너 너비"
+
+#: inc/customizer.php:499 inc/meta-box.php:62
+msgid "Layout"
+msgstr "레이아웃"
+
+#: inc/customizer/fields/body.php:146
+msgid "Link Color Visited"
+msgstr "방문한 링크 색상"
+
+#: inc/customizer/fields/back-to-top.php:80
+#: inc/customizer/fields/buttons.php:81
+msgid "Background Hover"
+msgstr "배경 마우스 오버 색상"
+
+#: inc/customizer.php:235
+msgid "Colors"
+msgstr "색상"
+
+#: inc/customizer.php:149
+msgid "Logo"
+msgstr "로고"
+
+#: inc/customizer.php:128
+msgid "Hide site tagline"
+msgstr "사이트 태그라인 숨기기"
+
+#: inc/customizer.php:109
+msgid "Hide site title"
+msgstr "사이트 제목 숨기기"
+
+#: inc/typography.php:229 inc/typography.php:403 inc/typography.php:550
+#: inc/typography.php:687 assets/dist/customizer.js:3
+msgid "Font size"
+msgstr "글꼴 크기"
+
+#: inc/customizer/controls/class-typography-control.php:78
+msgid "Text transform"
+msgstr "텍스트 변환"
+
+#: inc/customizer/controls/class-typography-control.php:77
+msgid "Font weight"
+msgstr "글꼴 두께"
+
+#: inc/customizer/fields/body.php:16 inc/typography.php:199
+#: assets/dist/customizer.js:1
+msgid "Body"
+msgstr "본문"
+
+#: inc/customizer.php:314 inc/typography.php:135
+msgid "Typography"
+msgstr "타이포그래피"
+
+#: inc/customizer/controls/class-deprecated.php:72
+#: inc/customizer/controls/class-typography-control.php:76
+msgid "Font family"
+msgstr "글꼴계열"
+
+#: inc/customizer/controls/class-deprecated.php:71
+#: inc/customizer/controls/class-typography-control.php:74
+msgid "Google fonts"
+msgstr "Google 글꼴"
+
+#: inc/customizer/controls/class-deprecated.php:70
+msgid "Default fonts"
+msgstr "기본 글꼴"
+
+#: inc/customizer.php:639 inc/customizer/fields/header.php:16
+#: inc/general.php:155 assets/dist/customizer.js:1
+msgid "Header"
+msgstr "헤더"
+
+#: inc/customizer.php:900 inc/general.php:154 inc/meta-box.php:148
+msgid "Left Sidebar"
+msgstr "좌측 사이드바"
+
+#: inc/customizer.php:901 inc/general.php:153 inc/meta-box.php:147
+msgid "Right Sidebar"
+msgstr "우측 사이드바"
+
+#: functions.php:58
+msgid "Primary Menu"
+msgstr "주 메뉴"
+
+#: inc/general.php:160
+msgid "Footer Widget 5"
+msgstr "푸터 위젯 5"
+
+#: inc/general.php:159
+msgid "Footer Widget 4"
+msgstr "푸터 위젯 4"
+
+#: inc/general.php:158
+msgid "Footer Widget 3"
+msgstr "푸터 위젯 3"
+
+#: inc/general.php:157
+msgid "Footer Widget 2"
+msgstr "푸터 위젯 2"
+
+#: inc/general.php:156
+msgid "Footer Widget 1"
+msgstr "푸터 위젯 1"
+
+#: inc/structure/comments.php:28 inc/structure/comments.php:82
+msgid "Edit"
+msgstr "편집"
+
+#: content-link.php:84 content-page.php:77 content-single.php:77 content.php:84
+msgid "Pages:"
+msgstr "페이지:"
+
+#: inc/structure/comments.php:164
+msgid "Post Comment"
+msgstr "댓글 달기"
+
+#: inc/structure/comments.php:163
+msgid "Leave a Comment"
+msgstr "댓글 남기기"
+
+#: inc/structure/comments.php:199
+msgid "Website"
+msgstr "웹사이트"
+
+#: inc/structure/comments.php:191
+msgid "Email"
+msgstr "이메일"
+
+#: inc/structure/comments.php:183
+msgid "Name"
+msgstr "이름"
+
+#: comments.php:123
+msgid "Comments are closed."
+msgstr "댓글은 닫혔습니다."
+
+#: comments.php:86 comments.php:113
+msgid "Newer Comments &rarr;"
+msgstr "새 댓글 &rarr;"
+
+#: comments.php:85 comments.php:112
+msgid "&larr; Older Comments"
+msgstr "&larr; 이전 댓글"
+
+#: comments.php:84 comments.php:111
+msgid "Comment navigation"
+msgstr "댓글 네비게이션"
+
+#. translators: 1: number of comments, 2: post title
+#: comments.php:50
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo;에 대한 %1$s개의 생각"
+
+#: inc/structure/sidebars.php:77
+msgid "Archives"
+msgstr "글 보관함"
+
+#: content-404.php:27
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "아차! 해당 페이지를 찾을 수 없습니다."
+
+#. Author URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://generatepress.com/about"
+msgstr "https://generatepress.com/about"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "Tom Usborne"
+msgstr "Tom Usborne\" (톰 어스본)"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://generatepress.com"
+msgstr "https://generatepress.com"
