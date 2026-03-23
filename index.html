@@ -3,6 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//ipapi.co">
+    <link rel="dns-prefetch" href="//ipwho.is">
+    <link rel="dns-prefetch" href="//ipinfo.io">
+    <link rel="preconnect" href="https://ipapi.co" crossorigin>
+    <link rel="preconnect" href="https://ipwho.is" crossorigin>
+    <link rel="preconnect" href="https://ipinfo.io" crossorigin>
     <title>Routing Service | Cyber Security</title>
     <style>
         :root {
@@ -139,22 +146,14 @@
 
     <script>
         (function () {
-            // 固定跳转到正式域名，避免本地调试域名(127.0.0.1)被拼进目标地址
             const MAIN_HOST = 'wuhanqing.cn';
-
-            // 测试用 IP：留空 '' 使用访问者真实 IP；填入后可模拟该 IP 所在国家
-            // 下面给你 10 个不同国家/地区示例（用于手动测试）:
-            // 中国大陆(CN): 123.125.71.38 -> https://wuhanqing.cn/wordpress
-            // 中国香港(HK): 203.160.80.255 -> https://wuhanqing.cn/wordpress
-            // 中国台湾(TW): 1.160.0.0 -> https://wuhanqing.cn/wordpress
-            // 日本(JP): 106.187.46.0 -> https://wuhanqing.cn/wordpress/?lang=ja
-            // 韩国(KR): 211.234.229.0 -> https://wuhanqing.cn/wordpress/?lang=ko
-            // 德国(DE): 176.9.0.0 -> https://wuhanqing.cn/wordpress/?lang=de
-            // 奥地利(AT): 37.252.224.0 -> https://wuhanqing.cn/wordpress/?lang=de
-            // 瑞士(CH): 146.159.0.0 -> https://wuhanqing.cn/wordpress/?lang=de
-            // 美国(US): 161.123.0.0 -> https://wuhanqing.cn/wordpress/?lang=en
-            // 英国(GB): 25.0.0.0 -> https://wuhanqing.cn/wordpress/?lang=en
             const TEST_IP = '';
+            const CACHE_KEY = 'geo_country_cache_v2';
+            const CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+            const PER_API_TIMEOUT_MS = 650;
+            const GLOBAL_TIMEOUT_MS = 900;
+            const ULTRA_FAST_MODE = true;
+            let redirected = false;
 
             function getLangFromCountry(countryCode) {
                 const code = (countryCode || '').toUpperCase();
@@ -163,6 +162,15 @@
                 if (code === 'JP') return 'ja';
                 if (['DE', 'AT', 'CH'].includes(code)) return 'de';
                 return 'en';
+            }
+
+            function getCountryFromNavigator() {
+                const locale = (navigator.language || '').toLowerCase();
+                if (locale.startsWith('zh')) return 'CN';
+                if (locale.startsWith('ko')) return 'KR';
+                if (locale.startsWith('ja')) return 'JP';
+                if (locale.startsWith('de')) return 'DE';
+                return 'US';
             }
 
             function buildTargetFromCountry(countryCode) {
@@ -174,81 +182,158 @@
                 return { url, lang };
             }
 
-            function updateUI(data, target) {
-                document.getElementById('ip-val').innerText = data.ip || 'UNKNOWN';
-                document.getElementById('loc-val').innerText = (data.city || 'UNKNOWN') + ', ' + (data.country || 'UNKNOWN');
-                document.getElementById('host-val').innerText = MAIN_HOST.toUpperCase();
-                document.getElementById('lang-val').innerText = target.lang.toUpperCase();
+            function safeSetText(id, value) {
+                const el = document.getElementById(id);
+                if (el) el.innerText = value;
+            }
 
-                const link = document.getElementById('fallback-link');
-                link.href = target.url;
-                link.innerText = target.url;
+            function safeSetLink(url) {
+                const el = document.getElementById('fallback-link');
+                if (!el) return;
+                el.href = url;
+                el.innerText = url;
+            }
+
+            function updateUI(data, target) {
+                safeSetText('ip-val', data.ip || 'UNKNOWN');
+                safeSetText('loc-val', (data.city || 'UNKNOWN') + ', ' + (data.country || 'UNKNOWN'));
+                safeSetText('host-val', MAIN_HOST.toUpperCase());
+                safeSetText('lang-val', target.lang.toUpperCase());
+                safeSetLink(target.url);
+            }
+
+            function cacheCountry(countryCode) {
+                try {
+                    localStorage.setItem(CACHE_KEY, JSON.stringify({
+                        country: (countryCode || '').toUpperCase(),
+                        ts: Date.now()
+                    }));
+                } catch (e) {
+                    // ignore cache failures
+                }
+            }
+
+            function readCachedCountry() {
+                try {
+                    const raw = localStorage.getItem(CACHE_KEY);
+                    if (!raw) return null;
+                    const data = JSON.parse(raw);
+                    if (!data || !data.country || !data.ts) return null;
+                    if ((Date.now() - data.ts) > CACHE_TTL_MS) return null;
+                    return String(data.country).toUpperCase();
+                } catch (e) {
+                    return null;
+                }
             }
 
             function fetchWithTimeout(url, timeoutMs) {
                 const controller = new AbortController();
-                const timer = setTimeout(() => controller.abort(), timeoutMs);
-                return fetch(url, { signal: controller.signal })
-                    .finally(() => clearTimeout(timer));
+                const timer = setTimeout(function () {
+                    controller.abort();
+                }, timeoutMs);
+                return fetch(url, { signal: controller.signal, cache: 'no-store' })
+                    .finally(function () { clearTimeout(timer); });
             }
 
             function normalizeGeo(raw) {
                 if (!raw || typeof raw !== 'object') return null;
 
-                // 兼容多个常见接口返回格式
-                const country = (raw.country_code || raw.countryCode || raw.country || '').toString().toUpperCase();
+                const country = (raw.country_code || raw.countryCode || raw.country || '').toString().trim().toUpperCase();
                 const city = raw.city || raw.region || 'UNKNOWN';
                 const ip = raw.ip || 'UNKNOWN';
 
-                if (!country || country.length < 2) return null;
-                return { country, city, ip };
+                if (!country) return null;
+                if (country.length === 2) return { country: country, city: city, ip: ip };
+                return null;
             }
 
-            async function resolveGeoByIp(testIp) {
-                // 多接口串行兜底，避免单个接口不可用导致卡住
-                const apis = [
+            function buildGeoApis(testIp) {
+                return [
                     testIp ? ('https://ipapi.co/' + encodeURIComponent(testIp) + '/json/') : 'https://ipapi.co/json/',
                     testIp ? ('https://ipwho.is/' + encodeURIComponent(testIp)) : 'https://ipwho.is/',
                     testIp ? ('https://ipinfo.io/' + encodeURIComponent(testIp) + '/json') : 'https://ipinfo.io/json'
                 ];
+            }
 
-                for (let i = 0; i < apis.length; i++) {
-                    try {
-                        const res = await fetchWithTimeout(apis[i], 1800);
-                        if (!res.ok) continue;
-                        const data = await res.json();
-                        const norm = normalizeGeo(data);
-                        if (norm) return norm;
-                    } catch (e) {
-                        // ignore and try next API
-                    }
-                }
+            async function resolveGeoFast(testIp) {
+                const apis = buildGeoApis(testIp);
+                const tasks = apis.map(function (api) {
+                    return fetchWithTimeout(api, PER_API_TIMEOUT_MS)
+                        .then(function (res) {
+                            if (!res.ok) throw new Error('bad-status');
+                            return res.json();
+                        })
+                        .then(function (raw) {
+                            const norm = normalizeGeo(raw);
+                            if (!norm) throw new Error('bad-payload');
+                            return norm;
+                        });
+                });
 
-                return {
-                    country: 'US',
-                    city: 'FALLBACK',
-                    ip: 'UNKNOWN'
-                };
+                const timedFallback = new Promise(function (resolve) {
+                    setTimeout(function () {
+                        resolve({
+                            country: getCountryFromNavigator(),
+                            city: 'FALLBACK',
+                            ip: 'UNKNOWN'
+                        });
+                    }, GLOBAL_TIMEOUT_MS);
+                });
+
+                return Promise.race([
+                    Promise.any(tasks).catch(function () {
+                        return {
+                            country: getCountryFromNavigator(),
+                            city: 'FALLBACK',
+                            ip: 'UNKNOWN'
+                        };
+                    }),
+                    timedFallback
+                ]);
             }
 
             function doRedirect(data) {
+                if (redirected) return;
+                redirected = true;
                 const target = buildTargetFromCountry(data.country);
                 updateUI(data, target);
+                cacheCountry(data.country);
                 window.location.replace(target.url);
             }
 
-            // 防止在 WordPress 内部路径继续重定向
             const path = window.location.pathname || '';
             if (path.startsWith('/wordpress') || path.startsWith('/wp-') || path.startsWith('/wp-admin')) {
                 return;
             }
 
-            // 显示处理中状态
-            const link = document.getElementById('fallback-link');
-            link.innerText = 'CHECKING IP...';
+            const cachedCountry = readCachedCountry();
+            if (cachedCountry) {
+                doRedirect({
+                    country: cachedCountry,
+                    city: 'CACHE',
+                    ip: 'CACHED'
+                });
+                return;
+            }
 
-            resolveGeoByIp(TEST_IP).then(doRedirect).catch(() => {
-                doRedirect({ country: 'US', city: 'FALLBACK', ip: 'UNKNOWN' });
+            // 极速模式：首次访问也不等待 Geo API，直接按浏览器语言秒跳。
+            // 如需严格按 IP 国家跳转，将 ULTRA_FAST_MODE 改为 false。
+            if (ULTRA_FAST_MODE && !TEST_IP) {
+                doRedirect({
+                    country: getCountryFromNavigator(),
+                    city: 'FASTLANE',
+                    ip: 'UNKNOWN'
+                });
+                return;
+            }
+
+            const warmTarget = buildTargetFromCountry(getCountryFromNavigator());
+            safeSetText('host-val', MAIN_HOST.toUpperCase());
+            safeSetText('lang-val', warmTarget.lang.toUpperCase());
+            safeSetLink(warmTarget.url);
+
+            resolveGeoFast(TEST_IP).then(doRedirect).catch(function () {
+                doRedirect({ country: getCountryFromNavigator(), city: 'FALLBACK', ip: 'UNKNOWN' });
             });
         })();
     </script>
