@@ -3,277 +3,216 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cosmic Opening Sequence</title>
+<title>Redirect</title>
 
 <style>
+/* =========================
+   🌌 基础主题（高对比暗黑）
+========================= */
+:root{
+    --bg:#020203;
+    --fg:#ffffff;
+    --muted:rgba(255,255,255,.78);
+    --glow:rgba(120,180,255,.18);
+}
+
 html,body{
-  margin:0;
-  height:100%;
-  overflow:hidden;
-  background:#000;
+    margin:0;
+    height:100%;
+    background:var(--bg);
+    overflow:hidden;
+    color:var(--fg);
+    font-family:"Arial Black",sans-serif;
 }
 
-canvas{
-  position:fixed;
-  inset:0;
+/* =========================
+   🌌 背景层（轻科技感）
+========================= */
+.gateway{
+    height:100%;
+    display:grid;
+    place-items:center;
+    position:relative;
+
+    background:
+        radial-gradient(circle at 50% 50%, rgba(120,180,255,0.10), transparent 55%),
+        radial-gradient(circle at 20% 80%, rgba(255,80,255,0.06), transparent 60%),
+        #020203;
 }
 
-/* UI */
-.ui{
-  position:fixed;
-  inset:0;
-  display:grid;
-  place-items:center;
-  z-index:5;
-  font-family:Arial Black;
-  color:white;
-  text-align:center;
-  letter-spacing:0.14em;
-  text-transform:uppercase;
-  text-shadow:
-    0 0 30px rgba(255,80,255,0.7),
-    0 0 120px rgba(255,255,255,0.2);
+/* 微弱呼吸光（不耗性能） */
+.gateway::after{
+    content:"";
+    position:absolute;
+    inset:-20%;
+    background:radial-gradient(circle, rgba(255,255,255,0.06), transparent 60%);
+    animation:breath 6s ease-in-out infinite;
+    pointer-events:none;
 }
 
-h1{font-size:clamp(28px,6vw,72px);margin:0;}
-p{opacity:.85}
+@keyframes breath{
+    0%,100%{transform:scale(1);opacity:.35;}
+    50%{transform:scale(1.04);opacity:.6;}
+}
 
-.vignette{
-  position:fixed;
-  inset:0;
-  z-index:4;
-  background:radial-gradient(circle at center,
-    transparent 25%,
-    rgba(0,0,0,0.95) 100%);
+/* =========================
+   🌌 扫描线（极轻）
+========================= */
+.gateway::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03) 0,
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    opacity:.2;
+}
+
+/* =========================
+   🌌 UI主体
+========================= */
+.hero{
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+
+    padding:5vmin;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 0 0 1px rgba(120,180,255,.12) inset,
+        0 0 60px rgba(120,180,255,.08),
+        0 0 120px rgba(255,80,255,.04);
+}
+
+/* 标题 */
+h1{
+    margin:0;
+    font-size:clamp(34px,7vw,88px);
+    line-height:.95;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.25),
+        0 0 40px rgba(120,180,255,.15);
+}
+
+/* 副标题 */
+p{
+    margin:14px 0 0;
+    font-size:clamp(20px,3vw,40px);
+    font-weight:800;
+    color:var(--muted);
+}
+
+/* =========================
+   ✍️ 光标（真实闪烁）
+========================= */
+.caret{
+    display:inline-block;
+    width:0.6ch;
+    border-right:2px solid #fff;
+    margin-left:6px;
+    transform:translateY(2px);
+
+    animation:blink .7s step-end infinite;
+    filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
+}
+
+@keyframes blink{
+    50%{opacity:0;}
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="c"></canvas>
-<div class="vignette"></div>
+<main class="gateway">
+    <section class="hero">
+        <h1>
+            <span id="h1"></span><span id="c1" class="caret"></span>
+        </h1>
 
-<div class="ui">
-  <div>
-    <h1 id="h1"></h1>
-    <p id="p"></p>
-  </div>
-</div>
+        <p>
+            <span id="p"></span><span id="c2" class="caret"></span>
+        </p>
+    </section>
+</main>
 
 <script>
-/* ⚡ FAST REDIRECT */
-const target="https://wuhanqing.cn/wordpress/";
-setTimeout(()=>location.replace(target),1100);
-
-/* typing */
-function type(el,text,speed=25){
-  let i=0;
-  const t=setInterval(()=>{
-    el.textContent=text.slice(0,i++);
-    if(i>text.length) clearInterval(t);
-  },speed);
-}
-
-type(h1,"HI, I'M WUHANQING");
-setTimeout(()=>type(p,"WELCOME TO MY WEBSITE"),200);
-
 /* =========================
-   🌌 ENGINE
+   ⚡ 超快跳转（核心性能）
 ========================= */
+const target = "https://wuhanqing.cn/wordpress/";
 
-const c=document.getElementById("c");
-const ctx=c.getContext("2d");
+/* 你可以改这个：越小越快 */
+const REDIRECT_DELAY = 220;
 
-let w,h;
-function resize(){
-  w=c.width=innerWidth;
-  h=c.height=innerHeight;
-}
-resize();
-addEventListener("resize",resize);
-
-const cx=()=>w/2;
-const cy=()=>h/2;
+setTimeout(() => {
+    location.replace(target);
+}, REDIRECT_DELAY);
 
 /* =========================
-   🌠 STAR DEPTH FIELD
-========================= */
-
-const stars = Array.from({length:800},()=>({
-  x:(Math.random()-0.5)*w,
-  y:(Math.random()-0.5)*h,
-  z:Math.random()*900
-}));
-
-/* =========================
-   🌫️ NEBULA LAYER
-========================= */
-
-const fog = Array.from({length:120},()=>({
-  x:Math.random()*w,
-  y:Math.random()*h,
-  a:Math.random()*0.35
-}));
-
-/* =========================
-   🌠 CINEMATIC COMET SYSTEM
+   ✍️ 可调打字系统（重点）
 ========================= */
 
 /*
-👉 核心改动：
-不是随机飞
-而是“导演轨迹”
+   👉 调这里控制速度：
+   20 = 快
+   28 = 推荐（电影感）
+   40 = 慢
 */
+const TYPE_SPEED_H1 = 26;
+const TYPE_SPEED_P  = 22;
 
-const comets=[];
+function type(el, text, speed, cb){
+    let i = 0;
 
-function spawnComet(){
+    function tick(){
+        el.textContent = text.slice(0, i++);
+        if(i <= text.length){
+            setTimeout(tick, speed);
+        }else{
+            cb && cb();
+        }
+    }
 
-  const startX = w*1.2;   // 右上外
-  const startY = -200;
-
-  const endX = -200;      // 左下外
-  const endY = h*1.2;
-
-  comets.push({
-
-    t:0,
-
-    /* 贝塞尔控制点（制造弧线） */
-    x0:startX,
-    y0:startY,
-
-    cx:w*0.5 + (Math.random()*200-100),
-    cy:h*0.2,
-
-    x1:endX,
-    y1:endY,
-
-    z:900
-  });
+    tick();
 }
-
-/* 稀疏电影级节奏 */
-setInterval(spawnComet,1600);
 
 /* =========================
-   🌌 RENDER LOOP
+   🚀 启动
 ========================= */
+document.addEventListener("DOMContentLoaded", () => {
 
-let t=0;
+    const h1 = document.getElementById("h1");
+    const p  = document.getElementById("p");
+    const c1 = document.getElementById("c1");
+    const c2 = document.getElementById("c2");
 
-function bezier(p0,p1,p2,t){
-  return (1-t)*(1-t)*p0 + 2*(1-t)*t*p1 + t*t*p2;
-}
+    h1.textContent = "";
+    p.textContent  = "";
 
-function draw(){
+    c2.style.display = "none";
 
-  ctx.fillStyle="rgba(0,0,0,0.22)";
-  ctx.fillRect(0,0,w,h);
+    /* 第一行 */
+    type(h1, "HI, I'M WUHANQING", TYPE_SPEED_H1, () => {
 
-  t+=0.002;
+        c1.style.display = "none";
+        c2.style.display = "inline-block";
 
-  /* ================= NEBULA ================= */
+        /* 第二行稍微延迟一点更高级 */
+        setTimeout(() => {
+            type(p, "WELCOME TO MY WEBSITE", TYPE_SPEED_P);
+        }, 120);
+    });
 
-  for(let f of fog){
-    ctx.fillStyle=`rgba(255,80,255,${f.a})`;
-    ctx.beginPath();
-    ctx.arc(f.x,f.y,2,0,Math.PI*2);
-    ctx.fill();
-  }
-
-  /* ================= STAR FIELD ================= */
-
-  for(let s of stars){
-
-    const dx=s.x;
-    const dy=s.y;
-    const dist=Math.sqrt(dx*dx+dy*dy)+0.0001;
-
-    const force=0.002;
-
-    const ang=Math.atan2(dy,dx);
-
-    s.x -= Math.cos(ang)*force*dist;
-    s.y -= Math.sin(ang)*force*dist;
-
-    const k=900/(s.z+1);
-
-    const x=cx()+s.x*k;
-    const y=cy()+s.y*k;
-
-    ctx.fillStyle="rgba(255,255,255,0.6)";
-    ctx.beginPath();
-    ctx.arc(x,y,1.2,0,Math.PI*2);
-    ctx.fill();
-
-    s.z -= 0.4;
-    if(s.z<1) s.z=900;
-  }
-
-  /* ================= BLACK HOLE ================= */
-
-  const g=ctx.createRadialGradient(cx(),cy(),0,cx(),cy(),320);
-  g.addColorStop(0,"rgba(0,0,0,1)");
-  g.addColorStop(0.3,"rgba(255,0,255,0.12)");
-  g.addColorStop(1,"transparent");
-
-  ctx.fillStyle=g;
-  ctx.beginPath();
-  ctx.arc(cx(),cy(),300,0,Math.PI*2);
-  ctx.fill();
-
-  /* ================= CINEMATIC COMETS ================= */
-
-  for(let cmt of comets){
-
-    cmt.t += 0.008;
-
-    if(cmt.t>1) continue;
-
-    /* 贝塞尔轨迹（关键） */
-    const x = bezier(cmt.x0,cmt.cx,cmt.x1,cmt.t);
-    const y = bezier(cmt.y0,cmt.cy,cmt.y1,cmt.t);
-
-    /* 进入镜头的Z变化 */
-    const z = cmt.z * (1-cmt.t);
-
-    const size = (1-cmt.t)*14;
-
-    /* ===== HEAD GLOW ===== */
-    const glow = ctx.createRadialGradient(x,y,0,x,y,60);
-
-    glow.addColorStop(0,"rgba(255,220,255,1)");
-    glow.addColorStop(0.2,"rgba(255,80,255,0.6)");
-    glow.addColorStop(1,"transparent");
-
-    ctx.fillStyle=glow;
-    ctx.beginPath();
-    ctx.arc(x,y,size,0,Math.PI*2);
-    ctx.fill();
-
-    /* ===== LONG TRAIL (电影拖尾) ===== */
-    for(let i=0;i<40;i++){
-
-      const tt = cmt.t - i*0.01;
-      if(tt<0) break;
-
-      const tx = bezier(cmt.x0,cmt.cx,cmt.x1,tt);
-      const ty = bezier(cmt.y0,cmt.cy,cmt.y1,tt);
-
-      ctx.fillStyle=`rgba(255,100,255,${1-i/40})`;
-
-      ctx.beginPath();
-      ctx.arc(tx,ty,size*(1-i/40),0,Math.PI*2);
-      ctx.fill();
-    }
-  }
-
-  requestAnimationFrame(draw);
-}
-
-draw();
+});
 </script>
 
 </body>
