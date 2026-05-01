@@ -3,215 +3,188 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Redirect</title>
 
 <style>
-/* =========================
-   🌌 基础主题（高对比暗黑）
-========================= */
 :root{
-    --bg:#020203;
-    --fg:#ffffff;
-    --muted:rgba(255,255,255,.78);
-    --glow:rgba(120,180,255,.18);
+  --fg:#fff;
 }
 
+/* ===== 基础 ===== */
 html,body{
-    margin:0;
-    height:100%;
-    background:var(--bg);
-    overflow:hidden;
-    color:var(--fg);
-    font-family:"Arial Black",sans-serif;
+  margin:0;
+  height:100%;
+  overflow:hidden;
+  color:var(--fg);
+  font-family:"Arial Black",sans-serif;
 }
 
-/* =========================
-   🌌 背景层（轻科技感）
-========================= */
+/* ===== 背景图（核心优化）===== */
+.bg{
+  position:fixed;
+  inset:0;
+  background:url("https://cdn.hk01.com/di/media/images/283787/org/2f557ce626504215f36f88c96c2bf8a8.jpg/0ZvRzxnRiEiBKP_6X_y9nc37AeDR_c-obsw2qW7MNqk")
+    center/cover no-repeat;
+  
+  /* 关键：营造加载感 */
+  filter: blur(6px) brightness(.55);
+  transform: scale(1.05);
+}
+
+/* 渐变遮罩（保证文字清晰） */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at center,
+    rgba(0,0,0,.2),
+    rgba(0,0,0,.7));
+}
+
+/* ===== UI ===== */
 .gateway{
-    height:100%;
-    display:grid;
-    place-items:center;
-    position:relative;
-
-    background:
-        radial-gradient(circle at 50% 50%, rgba(120,180,255,0.10), transparent 55%),
-        radial-gradient(circle at 20% 80%, rgba(255,80,255,0.06), transparent 60%),
-        #020203;
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:grid;
+  place-items:center;
 }
 
-/* 微弱呼吸光（不耗性能） */
-.gateway::after{
-    content:"";
-    position:absolute;
-    inset:-20%;
-    background:radial-gradient(circle, rgba(255,255,255,0.06), transparent 60%);
-    animation:breath 6s ease-in-out infinite;
-    pointer-events:none;
-}
-
-@keyframes breath{
-    0%,100%{transform:scale(1);opacity:.35;}
-    50%{transform:scale(1.04);opacity:.6;}
-}
-
-/* =========================
-   🌌 扫描线（极轻）
-========================= */
+/* 轻微扫描线 */
 .gateway::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    background:repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.03) 0,
-        rgba(255,255,255,0.03) 1px,
-        transparent 1px,
-        transparent 3px
-    );
-    opacity:.2;
+  content:"";
+  position:absolute;
+  inset:0;
+  background:repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,.03) 0,
+    rgba(255,255,255,.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity:.2;
 }
 
-/* =========================
-   🌌 UI主体
-========================= */
+/* 内容 */
 .hero{
-    text-align:center;
-    text-transform:uppercase;
-    letter-spacing:.08em;
-
-    padding:5vmin;
-
-    border:1px solid rgba(255,255,255,.25);
-
-    box-shadow:
-        0 0 0 1px rgba(120,180,255,.12) inset,
-        0 0 60px rgba(120,180,255,.08),
-        0 0 120px rgba(255,80,255,.04);
+  text-align:center;
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
 
-/* 标题 */
 h1{
-    margin:0;
-    font-size:clamp(34px,7vw,88px);
-    line-height:.95;
-
-    text-shadow:
-        0 0 10px rgba(255,255,255,.25),
-        0 0 40px rgba(120,180,255,.15);
+  margin:0;
+  font-size:clamp(34px,7vw,88px);
+  text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 40px rgba(120,180,255,.2);
 }
 
-/* 副标题 */
 p{
-    margin:14px 0 0;
-    font-size:clamp(20px,3vw,40px);
-    font-weight:800;
-    color:var(--muted);
+  margin:12px 0 0;
+  font-size:clamp(20px,3vw,40px);
+  opacity:.85;
 }
 
-/* =========================
-   ✍️ 光标（真实闪烁）
-========================= */
+/* ===== 光标（真实闪烁 - 强化版）===== */
 .caret{
-    display:inline-block;
-    width:0.6ch;
-    border-right:2px solid #fff;
-    margin-left:6px;
-    transform:translateY(2px);
-
-    animation:blink .7s step-end infinite;
-    filter:drop-shadow(0 0 6px rgba(255,255,255,.6));
+  display:inline-block;
+  width:.6ch;
+  border-right:3px solid #fff;
+  margin-left:6px;
+  animation:blink 0.5s step-end infinite;
+  box-shadow: 0 0 8px rgba(120,180,255,.6);
 }
 
 @keyframes blink{
-    50%{opacity:0;}
+  0%, 49%{
+    opacity:1;
+    box-shadow: 0 0 8px rgba(120,180,255,.6), 0 0 16px rgba(120,180,255,.3);
+  }
+  50%, 100%{
+    opacity:0;
+    box-shadow: 0 0 0 rgba(120,180,255,0);
+  }
 }
 </style>
 </head>
 
 <body>
 
-<main class="gateway">
-    <section class="hero">
-        <h1>
-            <span id="h1"></span><span id="c1" class="caret"></span>
-        </h1>
+<div class="bg"></div>
+<div class="overlay"></div>
 
-        <p>
-            <span id="p"></span><span id="c2" class="caret"></span>
-        </p>
-    </section>
+<main class="gateway">
+  <div class="hero">
+    <h1>
+      <span id="h1"></span><span id="c1" class="caret"></span>
+    </h1>
+    <p>
+      <span id="p"></span><span id="c2" class="caret"></span>
+    </p>
+  </div>
 </main>
 
 <script>
 /* =========================
-   ⚡ 超快跳转（核心性能）
+   ⚡ 1. 极速语言判断 + 毫秒级跳转
 ========================= */
-const target = "https://wuhanqing.cn/wordpress/";
 
-/* 你可以改这个：越小越快 */
-const REDIRECT_DELAY = 220;
+const base = "https://wuhanqing.cn/wordpress/";
+const lang = (navigator.language || "en").toLowerCase();
 
-setTimeout(() => {
-    location.replace(target);
-}, REDIRECT_DELAY);
+let target = base;
+
+if (lang.startsWith("zh")) target = base;
+else if (lang.startsWith("ko")) target = base + "?lang=ko";
+else if (lang.startsWith("ja")) target = base + "?lang=ja";
+else if (lang.startsWith("de")) target = base + "?lang=de";
+else target = base + "?lang=en";
+
+/* 🚀 立即跳转 - 毫秒级响应 */
+location.replace(target);
 
 /* =========================
-   ✍️ 可调打字系统（重点）
+   ✍️ 3. 高速打字系统（光标持续闪动）
 ========================= */
 
-/*
-   👉 调这里控制速度：
-   20 = 快
-   28 = 推荐（电影感）
-   40 = 慢
-*/
-const TYPE_SPEED_H1 = 26;
-const TYPE_SPEED_P  = 22;
+function type(el,text,baseSpeed,cb){
+  let i=0;
 
-function type(el, text, speed, cb){
-    let i = 0;
+  function tick(){
+    el.textContent = text.slice(0,i++);
 
-    function tick(){
-        el.textContent = text.slice(0, i++);
-        if(i <= text.length){
-            setTimeout(tick, speed);
-        }else{
-            cb && cb();
-        }
+    if(i<=text.length){
+      /* 👉 关键：随机节奏保持自然，但总体速度快 */
+      const variance = Math.random()*6;
+      setTimeout(tick, baseSpeed + variance);
+    }else{
+      cb && cb();
     }
+  }
 
-    tick();
+  tick();
 }
 
 /* =========================
-   🚀 启动
+   🚀 启动打字动画（装饰效果）
 ========================= */
-document.addEventListener("DOMContentLoaded", () => {
 
-    const h1 = document.getElementById("h1");
-    const p  = document.getElementById("p");
-    const c1 = document.getElementById("c1");
-    const c2 = document.getElementById("c2");
+const h1 = document.getElementById("h1");
+const p  = document.getElementById("p");
+const c1 = document.getElementById("c1");
+const c2 = document.getElementById("c2");
 
-    h1.textContent = "";
-    p.textContent  = "";
+c2.style.display="none";
 
-    c2.style.display = "none";
+/* 第一行 - 打字 */
+type(h1,"HI, I'M WUHANQING",12,()=>{
+  c1.style.display="none";
+  c2.style.display="inline-block";
 
-    /* 第一行 */
-    type(h1, "HI, I'M WUHANQING", TYPE_SPEED_H1, () => {
-
-        c1.style.display = "none";
-        c2.style.display = "inline-block";
-
-        /* 第二行稍微延迟一点更高级 */
-        setTimeout(() => {
-            type(p, "WELCOME TO MY WEBSITE", TYPE_SPEED_P);
-        }, 120);
-    });
-
+  setTimeout(()=>{
+    type(p,"WELCOME TO MY WEBSITE",11);
+  },50);
 });
 </script>
 
