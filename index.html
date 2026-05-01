@@ -6,12 +6,15 @@
 
 <title>Redirect</title>
 
+<!-- ⚡ 预解析 + 预连接（关键加速） -->
+<link rel="dns-prefetch" href="//wuhanqing.cn">
+<link rel="preconnect" href="https://wuhanqing.cn" crossorigin>
+
 <style>
 :root{
   --fg:#fff;
 }
 
-/* ===== 基础 ===== */
 html,body{
   margin:0;
   height:100%;
@@ -20,28 +23,27 @@ html,body{
   font-family:"Arial Black",sans-serif;
 }
 
-/* ===== 背景图（核心优化）===== */
+/* ===== 背景 ===== */
 .bg{
   position:fixed;
   inset:0;
   background:url("https://cdn.hk01.com/di/media/images/283787/org/2f557ce626504215f36f88c96c2bf8a8.jpg/0ZvRzxnRiEiBKP_6X_y9nc37AeDR_c-obsw2qW7MNqk")
     center/cover no-repeat;
-  
-  /* 关键：营造加载感 */
+
   filter: blur(6px) brightness(.55);
   transform: scale(1.05);
 }
 
-/* 渐变遮罩（保证文字清晰） */
+/* 渐变遮罩 */
 .overlay{
   position:fixed;
   inset:0;
   background:radial-gradient(circle at center,
-    rgba(0,0,0,.2),
-    rgba(0,0,0,.7));
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.75));
 }
 
-/* ===== UI ===== */
+/* UI */
 .gateway{
   position:relative;
   z-index:2;
@@ -50,7 +52,7 @@ html,body{
   place-items:center;
 }
 
-/* 轻微扫描线 */
+/* 扫描线 */
 .gateway::before{
   content:"";
   position:absolute;
@@ -65,6 +67,20 @@ html,body{
   opacity:.2;
 }
 
+/* 呼吸光 */
+.gateway::after{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:radial-gradient(circle, rgba(120,180,255,.08), transparent 60%);
+  animation:breath 6s ease-in-out infinite;
+}
+
+@keyframes breath{
+  0%,100%{transform:scale(1);opacity:.3;}
+  50%{transform:scale(1.05);opacity:.6;}
+}
+
 /* 内容 */
 .hero{
   text-align:center;
@@ -77,34 +93,26 @@ h1{
   font-size:clamp(34px,7vw,88px);
   text-shadow:
     0 0 10px rgba(255,255,255,.4),
-    0 0 40px rgba(120,180,255,.2);
+    0 0 40px rgba(120,180,255,.25);
 }
 
 p{
   margin:12px 0 0;
   font-size:clamp(20px,3vw,40px);
-  opacity:.85;
+  opacity:.9;
 }
 
-/* ===== 光标（真实闪烁 - 强化版）===== */
+/* ===== 光标（永久闪烁） ===== */
 .caret{
   display:inline-block;
   width:.6ch;
   border-right:3px solid #fff;
   margin-left:6px;
-  animation:blink 0.5s step-end infinite;
-  box-shadow: 0 0 8px rgba(120,180,255,.6);
+  animation:blink .6s step-end infinite;
 }
 
 @keyframes blink{
-  0%, 49%{
-    opacity:1;
-    box-shadow: 0 0 8px rgba(120,180,255,.6), 0 0 16px rgba(120,180,255,.3);
-  }
-  50%, 100%{
-    opacity:0;
-    box-shadow: 0 0 0 rgba(120,180,255,0);
-  }
+  50%{opacity:0;}
 }
 </style>
 </head>
@@ -117,75 +125,71 @@ p{
 <main class="gateway">
   <div class="hero">
     <h1>
-      <span id="h1"></span><span id="c1" class="caret"></span>
+      <span id="h1"></span><span class="caret"></span>
     </h1>
     <p>
-      <span id="p"></span><span id="c2" class="caret"></span>
+      <span id="p"></span><span class="caret"></span>
     </p>
   </div>
 </main>
 
 <script>
 /* =========================
-   ⚡ 1. 极速语言判断 + 毫秒级跳转
+   ⚡ 语言判断（同步毫秒级）
 ========================= */
 
 const base = "https://wuhanqing.cn/wordpress/";
-const lang = (navigator.language || "en").toLowerCase();
+const langs = navigator.languages || [navigator.language || "en"];
 
-let target = base;
+let target = base + "en/"; // 默认英文
 
-if (lang.startsWith("zh")) target = base;
-else if (lang.startsWith("ko")) target = base + "?lang=ko";
-else if (lang.startsWith("ja")) target = base + "?lang=ja";
-else if (lang.startsWith("de")) target = base + "?lang=de";
-else target = base + "?lang=en";
+for(let l of langs){
+  l = l.toLowerCase();
 
-/* 🚀 立即跳转 - 毫秒级响应 */
-location.replace(target);
-
-/* =========================
-   ✍️ 3. 高速打字系统（光标持续闪动）
-========================= */
-
-function type(el,text,baseSpeed,cb){
-  let i=0;
-
-  function tick(){
-    el.textContent = text.slice(0,i++);
-
-    if(i<=text.length){
-      /* 👉 关键：随机节奏保持自然，但总体速度快 */
-      const variance = Math.random()*6;
-      setTimeout(tick, baseSpeed + variance);
-    }else{
-      cb && cb();
-    }
+  if(l.startsWith("zh")){
+    target = base;
+    break;
   }
-
-  tick();
+  if(l.startsWith("ko")){
+    target = base + "ko/";
+    break;
+  }
+  if(l.startsWith("ja")){
+    target = base + "ja/";
+    break;
+  }
+  if(l.startsWith("de")){
+    target = base + "de/";
+    break;
+  }
 }
 
 /* =========================
-   🚀 启动打字动画（装饰效果）
+   🚀 下一帧跳转（关键优化）
+========================= */
+requestAnimationFrame(()=>{
+  location.replace(target);
+});
+
+/* =========================
+   ✍️ 打字（不影响跳转）
 ========================= */
 
-const h1 = document.getElementById("h1");
-const p  = document.getElementById("p");
-const c1 = document.getElementById("c1");
-const c2 = document.getElementById("c2");
+function type(el,text,speed){
+  let i=0;
+  (function tick(){
+    el.textContent = text.slice(0,i++);
+    if(i<=text.length){
+      setTimeout(tick, speed + Math.random()*8);
+    }
+  })();
+}
 
-c2.style.display="none";
+type(document.getElementById("h1"),"HI, I'M WUHANQING",18);
+setTimeout(()=>{
+  type(document.getElementById("p"),"WELCOME TO MY WEBSITE",16);
+},120);
 
-/* 第一行 - 打字 */
-type(h1,"HI, I'M WUHANQING",12,()=>{
-  c1.style.display="none";
-  c2.style.display="inline-block";
-
-  setTimeout(()=>{
-    type(p,"WELCOME TO MY WEBSITE",11);
-  },50);
-});
 </script>
 
 </body>
