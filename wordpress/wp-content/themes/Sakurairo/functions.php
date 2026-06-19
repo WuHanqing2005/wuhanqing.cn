@@ -1809,13 +1809,19 @@ IROChatGPT\apply_chatgpt_hook();
 
 function excerpt_length($exp)
 {
+    global $post;
+    
+    // 【核心改进】：检查当前文章是否有手动填写的摘要
+    // 如果有，直接返回原内容，跳过截断逻辑！
+    if (has_excerpt($post->ID)) {
+        return $exp; 
+    }
+    
+    // 如果没有手动摘要，才执行原有的截断逻辑
     if (!function_exists('mb_substr')) {
-        $exp = GBsubstr($exp, 0, 110);
+        $exp = GBsubstr($exp, 0, 200);
     } else {
-        /*
-         * To use mb_substr() function, you should uncomment "extension=php_mbstring.dll" in php.ini
-         */
-        $exp = mb_substr($exp, 0, 110);
+        $exp = mb_substr($exp, 0, 200);
     }
     return $exp;
 }
@@ -4524,3 +4530,64 @@ function iro_action_operator()
 }
 iro_action_operator();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** --- 以下是 Daniel 的专属自定义代码 --- **/
+
+/** 1. 注入 CSS 样式 (让你的隐藏文字生效) **/
+function my_custom_css_styles() {
+    echo '<style>
+    .hidden-text { transition: all 0.3s ease; }
+    .hidden-text.hidden-text-blur { filter: blur(4px); }
+    .hidden-text.hidden-text-blur:hover { filter: blur(0px); }
+    .hidden-text.hidden-text-background { background: #000; color: transparent; border-radius: 1px; }
+    .hidden-text.hidden-text-background:hover { background: transparent; color: inherit; border-radius: 0px; }
+    </style>';
+}
+add_action('wp_head', 'my_custom_css_styles');
+
+// 彻底干掉所有关于摘要长度的干扰
+remove_all_filters('get_the_excerpt');
+remove_all_filters('the_excerpt');
+
+function custom_chinese_excerpt( $excerpt ) {
+    global $post;
+    
+    // 1. 获取手动摘要
+    $manual_excerpt = get_post_field('post_excerpt', $post->ID);
+    if (!empty($manual_excerpt)) {
+        return $manual_excerpt; // 有手动填写的，原样返回，谁也不准动！
+    }
+
+    // 2. 只有没填手动摘要时，才去截取正文
+    $content = get_the_content(); 
+    $content = strip_shortcodes( $content );
+    $content = preg_replace('/#+\s+/', '', $content); 
+    $content = strip_tags($content); 
+    
+    return mb_strimwidth($content, 0, 800, '...', 'utf8');
+}
+
+add_filter( 'get_the_excerpt', 'custom_chinese_excerpt', 999 );
+add_filter( 'the_excerpt', 'custom_chinese_excerpt', 999 );
